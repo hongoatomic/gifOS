@@ -1,0 +1,373 @@
+* {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.nav {
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+}
+
+.logo {
+    float: left;
+    margin-left: 16px;
+}
+
+.menu {
+    margin: 0 30px 0 0;
+}
+
+label {
+    margin: 0 19px 0 0;
+    font-size: 19px;
+    line-height: 70px;
+    display: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #060a24;
+    margin: 0 10px;
+    line-height: 70px;
+}
+
+.menu a:hover {
+    color: #00f3bb;
+    text-decoration: line-through;
+}
+
+.menu a:active {
+    color: rgba(6, 10, 36, 0.562);
+    text-decoration: line-through;
+}
+
+#toggle {
+    display: none;
+}
+
+.hello {
+    margin: 29px 16px 16px 16px;
+}
+
+.hello p {
+    font-family: IBM Plex Mono;
+    font-size: 14px;
+    line-height: 22px;
+    color: #060a24;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+
+h3 {
+    font-family: IBM Plex Sans;
+    font-size: 36px;
+    font-weight: 400;
+    color: #060a24;
+    line-height: 42px;
+    margin: 0 16px 14px 16px;
+}
+
+#episodios {
+    padding: 40px 0 100px 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 255, 1) 21%,
+        rgba(0, 0, 232, 1) 30%
+    );
+}
+
+#episodios h3 {
+    color: white;
+}
+
+.iframes {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (4, 1fr);
+    justify-content: center;
+}
+
+#episodios iframe {
+    justify-self: center;
+}
+
+#nosotros img {
+    position: relative;
+    height: 519px;
+    margin-top: -86px;
+}
+
+#nosotros h3,
+#nosotros p {
+    margin: 0 5% 5% 5%;
+}
+
+#nosotros p {
+    font-family: IBM Plex Mono;
+    font-size: 14px;
+    color: #060a24;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin-bottom: 54px;
+}
+
+#entrevistas img {
+    width: 320px;
+    height: 243px;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parent-icons {
+    display: grid;
+    justify-content: center;
+}
+
+.parent-icons span {
+    text-align: center;
+    font-family: IBM Plex Sans;
+    font-weight: bold;
+    font-size: 24px;
+    color: #060a24;
+    letter-spacing: 0;
+}
+
+.parent-icons img {
+    margin: 49px auto 0 auto;
+}
+
+#novedades h3 {
+    margin-top: 106px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.divider,
+.divider2 {
+    border: 32px solid white;
+    background-color: white;
+    transform: skewY(-2deg);
+    margin: 0 -2px -38px 0;
+}
+.divider2 {
+    margin: -12px -2px -38px 0;
+}
+
+#novedades {
+    padding-top: 40px;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 255, 1) 21%,
+        rgba(0, 0, 232, 1) 30%
+    );
+}
+
+footer {
+    font-family: IBM Plex Mono;
+    font-size: 14px;
+    color: #060a24;
+    letter-spacing: 0;
+    line-height: 22px;
+    text-align: center;
+}
+
+footer .iconos {
+    display: flex;
+    justify-content: space-around;
+    margin: 16px 45px 31px 45px;
+}
+.boton,
+.boton1 {
+    text-align: center;
+}
+.btn,
+.btn1 {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background-color: #00f3bb;
+    width: 226px;
+    height: 56px;
+    margin: 36px 16px 26px 16px;
+}
+
+.btn:hover,
+.btn1:hover {
+    color: white;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 240, 184, 1) 0%,
+        rgba(0, 118, 220, 1) 21%,
+        rgba(0, 0, 254, 1) 91%
+    );
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 768px) {
+    /* navbar */
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .menu a {
+        background-color: #0000ec;
+        display: block;
+        margin: 0;
+        z-index: 1;
+        color: white;
+    }
+
+    .menu a:hover {
+        color: #00f3bb;
+        text-decoration: line-through;
+    }
+
+    .menu a:active {
+        color: rgba(6, 10, 36, 0.562);
+        text-decoration: line-through;
+    }
+
+    #toggle:checked + .menu {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .hello {
+        width: 628px;
+        padding-left: 200px;
+    }
+    .boton {
+        text-align: left;
+    }
+
+    .btn {
+        margin-left: 0px;
+    }
+
+    #episodios h3 {
+        margin-left: 200px;
+        margin-top: 20px;
+    }
+
+    .iframes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 72px;
+        padding: 0 100px 50px;
+    }
+    .iframes iframe {
+        width: 500px;
+        height: 232px;
+    }
+
+    #nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px, 1fr, 1fr;
+        grid-template-areas:
+            "divider divider"
+            "img h3"
+            "img p";
+    }
+
+    #nosotros img {
+        grid-area: img;
+        justify-self: center;
+        margin-bottom: 64px;
+    }
+
+    #nosotros h3 {
+        grid-area: h3;
+        margin-top: 48px;
+        margin-left: -30px;
+    }
+
+    #nosotros p {
+        grid-area: p;
+        margin-top: -100px;
+        margin-left: -30px;
+        padding-right: 65px;
+    }
+
+    .divider2 {
+        grid-area: divider;
+        margin: -18px -2px -38px 0;
+    }
+
+    #entrevistas h3 {
+        margin-left: 200px;
+    }
+
+    #entrevistas .parent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #entrevistas img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    #topicos .parent-icons {
+        display: flex;
+    }
+
+    .parent-icons span {
+        margin: 0 10px;
+    }
+
+    #topicos .wrap {
+        z-index: 1;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer h5 {
+        margin-left: 100px;
+    }
+
+    .iconos a {
+        margin-left: 36px;
+    }
+
+    .iconos:last-child {
+        margin-right: 100px;
+    }
+}
