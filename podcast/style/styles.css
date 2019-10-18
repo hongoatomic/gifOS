@@ -109,7 +109,7 @@ h3 {
     margin: 0 5% 5% 5%;
 }
 
-#entrevistas img {
+.entrevistas img {
     width: 320px;
     height: 243px;
 }
@@ -133,10 +133,6 @@ h3 {
     font-size: 24px;
 }
 
-.parent-icons img {
-    margin: 49px auto 0 auto;
-}
-
 .novedades h3 {
     text-align: center;
 }
@@ -149,20 +145,11 @@ h3 {
     margin: 0 -2px -38px 0;
 }
 .divider2 {
-    margin: -12px -2px -38px 0;
+    margin-top: -12px;
 }
 
 .novedades {
     padding-bottom: 0px;
-}
-
-footer {
-    font-family: IBM Plex Mono;
-    font-size: 14px;
-    color: #060a24;
-    letter-spacing: 0;
-    line-height: 22px;
-    text-align: center;
 }
 
 footer .iconos {
@@ -221,17 +208,7 @@ footer .iconos {
         color: white;
     }
 
-    .menu a:hover {
-        color: #00f3bb;
-        text-decoration: line-through;
-    }
-
-    .menu a:active {
-        color: rgba(6, 10, 36, 0.562);
-        text-decoration: line-through;
-    }
-
-    #toggle:checked + .menu {
+    .toggle:checked + .menu {
         display: block;
     }
 }
@@ -241,8 +218,10 @@ footer .iconos {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
+    }
+
+    .wrap h3 {
+        align-self: normal;
     }
 
     .hello {
@@ -257,7 +236,7 @@ footer .iconos {
         margin-left: 0px;
     }
 
-    #episodios h3 {
+    h3 {
         margin-left: 200px;
         margin-top: 20px;
     }
@@ -274,7 +253,7 @@ footer .iconos {
         height: 232px;
     }
 
-    #nosotros {
+    .nosotros {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 50px, 1fr, 1fr;
@@ -284,19 +263,19 @@ footer .iconos {
             "img p";
     }
 
-    #nosotros img {
+    .nosotros img {
         grid-area: img;
         justify-self: center;
         margin-bottom: 64px;
     }
 
-    #nosotros h3 {
+    .nosotros h3 {
         grid-area: h3;
         margin-top: 48px;
         margin-left: -30px;
     }
 
-    #nosotros p {
+    .nosotros p {
         grid-area: p;
         margin-top: -100px;
         margin-left: -30px;
@@ -305,26 +284,23 @@ footer .iconos {
 
     .divider2 {
         grid-area: divider;
-        margin: -18px -2px -38px 0;
+        margin-top: -18px;
     }
 
-    #entrevistas h3 {
-        margin-left: 200px;
-    }
-
-    #entrevistas .parent {
+    .entrevistas .parent {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
 
-    #entrevistas img {
+    .entrevistas img {
         width: 100%;
         height: auto;
         object-fit: cover;
     }
 
-    #topicos .parent-icons {
+    .parent-icons,
+    footer {
         display: flex;
     }
 
@@ -332,12 +308,11 @@ footer .iconos {
         margin: 0 10px;
     }
 
-    #topicos .wrap {
+    .topicos .wrap {
         z-index: 1;
     }
 
     footer {
-        display: flex;
         justify-content: space-between;
     }
 
