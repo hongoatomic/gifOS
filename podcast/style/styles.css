@@ -8,6 +8,7 @@
     width: 100%;
     height: 100%;
     margin: 0;
+    padding: 0;
     font-size: 16px;
 }
 
@@ -69,7 +70,7 @@ h3 {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 36px;
     font-weight: 400;
-    margin-left: 16px;
+    margin-left: 5px;
 }
 
 .episodios h3,
@@ -87,6 +88,29 @@ h3 {
     );
 }
 
+.episodios,
+.novedades {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sesgo,
+.sesgo1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 15vh 100vw 0 0;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+.sesgo1 {
+    bottom: 0;
+    border-width: 0 0 15vh 100vw;
+    border-color: transparent transparent #fff transparent;
+}
+
 .iframes {
     display: grid;
     grid-template-columns: 1fr;
@@ -101,7 +125,7 @@ h3 {
 .nosotros img {
     position: relative;
     height: 519px;
-    margin-top: -86px;
+    margin-top: -120px;
 }
 
 .nosotros h3,
@@ -136,25 +160,18 @@ h3 {
     text-align: center;
 }
 
-.divider,
-.divider2 {
-    border: 32px solid white;
-    background-color: white;
-    transform: skewY(-2deg);
-    margin: 0 -2px -38px 0;
-}
-.divider2 {
-    margin-top: -12px;
-}
-
 .novedades {
     padding-bottom: 0px;
+}
+
+h5 {
+    text-align: center;
 }
 
 footer .iconos {
     display: flex;
     justify-content: space-around;
-    margin: 16px 45px 31px 45px;
+    margin: 16px 45px 16px 45px;
 }
 .boton,
 .boton1 {
@@ -212,11 +229,15 @@ footer .iconos {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 770px) {
     .parent {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
+    }
+
+    h3 {
+        margin-top: 50px;
     }
 
     .wrap h3 {
@@ -233,11 +254,6 @@ footer .iconos {
 
     .btn {
         margin-left: 0px;
-    }
-
-    h3 {
-        margin-left: 200px;
-        margin-top: 20px;
     }
 
     .iframes {
@@ -257,7 +273,7 @@ footer .iconos {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 50px, 1fr, 1fr;
         grid-template-areas:
-            "divider divider"
+            "sesgo sesgo"
             "img h3"
             "img p";
     }
@@ -281,11 +297,6 @@ footer .iconos {
         padding-right: 65px;
     }
 
-    .divider2 {
-        grid-area: divider;
-        margin-top: -18px;
-    }
-
     .entrevistas .parent {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -303,8 +314,18 @@ footer .iconos {
         display: flex;
     }
 
+    .parent-icons h3 {
+        position: absolute;
+        margin-left: 0px;
+        font-weight: 400;
+    }
+
+    .parent-icons .wrap {
+        margin: 130px 0px 0px 0px;
+    }
+
     .parent-icons span {
-        margin: 0 10px;
+        margin: 0 20px;
     }
 
     .topicos .wrap {
@@ -325,5 +346,15 @@ footer .iconos {
 
     .iconos:last-child {
         margin-right: 100px;
+    }
+}
+
+@media only screen and (min-width: 1430px) {
+    .episodios h3 {
+        margin-top: 95px;
+    }
+    .episodios h3,
+    .wrap h3 {
+        margin-left: 200px;
     }
 }
