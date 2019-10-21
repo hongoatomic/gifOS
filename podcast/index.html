@@ -17,7 +17,7 @@
             <img src="Images/logo.svg" alt="logo">
         </div>
         <label for="toggle">&#9776;</label>
-        <input type="checkbox" id="toggle">
+        <input type="checkbox" id="toggle" class="toggle">
         <div class="menu">
             <a href="#episodios">Episodios</a>
             <a href="#nosotros">Nosotros</a>
@@ -27,34 +27,35 @@
     </div>
     <!-- Acá termina navbar-->
     <div class="hello">
-        <h1>Hello <strike>world</strike> pale blue dot<span style="color:#0000EC;">.</span></h1>
+        <h1>Hello <strike>world</strike> pale blue dot</h1>
         <p>El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.</p>
         <div class="boton">
-            <button class="btn">Conocé más</button>
+            <button class="btn">CONOCÉ MÁS</button>
         </div>
     </div>
-    <div class="divider"></div>
-    <div id="episodios">
-        <h3 style="padding-top: 20px;">Episodios</h3>
+    
+    <section id="episodios" class="episodios">
+        <div class="sesgo"></div>
+        <h3>Episodios</h3>
         <div class="iframes">
         <iframe src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" width="298" height="175" frameborder="0"  allowtransparency="true" allow="encrypted-media"></iframe>
         <iframe src="https://open.spotify.com/embed-podcast/episode/1ezdL2ivAGLwSE6Xbssxqt" width="298" height="175" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         <iframe src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD" width="298" height="175" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         <iframe src="https://open.spotify.com/embed-podcast/episode/31VyAQAwBiKoHVoYUCEzjQ" width="298" height="175" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
-    </div>
+        <div class="sesgo1"></div>
+    </section>
     
-    <div id="nosotros">
-        <div class="divider2"></div>
+    <section id="nosotros" class="nosotros wrap">
         <img src="Images/phone.png" alt="phone">
         <h3>De dónde venimos</h3>
         <p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. <br> 
         <br>Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.
         </p>   
-    </div>
-    <div id="entrevistas" class="wrap">
+    </section>
+    <section id="entrevistas" class="wrap">
         <h3>Invitadas/os estelares</h3>
-        <div class="parent wrap">
+        <div class="parent">
             <img src="Images/grace-hopper.png" alt="Grace Hopper">
             <img src="Images/Katie-Bouman.png" alt="Katien Bouman">
             <img src="Images/Margaret_Hamilton.png" alt="Margaret Hamilton">
@@ -62,17 +63,17 @@
             <img src="Images/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png" alt="Operadores de computadoras">
             <img src="Images/susan-kare.png" alt="Susan Kare">
         </div>    
-    </div>
-    <div id="topicos">
+    </section>
+    <section id="topicos" class="topicos">
         <div class="parent-icons">
             <h3>Algunos de nuestros temas</h3>
             <div class="wrap">
                 <img src="images/icon1.svg" alt="Icono trabajo remoto">
-                <span class="caption">Trabajo remoto </span>
+                <span>Trabajo remoto </span>
             </div>   
             <div class="wrap"> 
                 <img src="images/icon2.svg" alt="Icono repensando">
-                <span class="caption">Repensando la programación </span>   
+                <span>Repensando la programación </span>   
             </div>
             <div class="wrap">
                 <img src="images/icon3.svg" alt="Laptop">
@@ -83,15 +84,15 @@
                 <span>Seguridad informática </span>  
             </div>        
         </div>
-    </div>
-    <div class="divider"></div>
-    <div id="novedades">
+    </section>
+    
+    <section id="novedades" class="novedades">
+        <div class="sesgo"></div>
         <h3>¿Querés las últimas novedades?</h3>
         <div class="boton1">
-            <button class="btn1" style="font-size: 16px;">ESCUCHÁ LOS EPISODIOS</button>
+            <button class="btn1">ESCUCHÁ LOS EPISODIOS</button>
         </div>
-    
-    </div>
+    </section>
     <footer>
         <h5>© 2019— Hello blue pale dot</h5>
         <ul class="iconos">
