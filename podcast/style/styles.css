@@ -23,6 +23,7 @@
 }
 
 label {
+    margin-right: 16px;
     font-size: 19px;
     display: none;
 }
@@ -238,6 +239,10 @@ footer .iconos {
 
     h3 {
         margin-top: 50px;
+    }
+
+    .episodios-h3 {
+        margin-left: 200px;
     }
 
     .wrap h3 {
