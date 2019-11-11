@@ -1,6 +1,5 @@
 * {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "IBM Plex Sans", "IBM Plex Mono", sans-serif, monospace;
     color: #060a24;
 }
 
@@ -12,7 +11,7 @@
     font-size: 16px;
 }
 
-.nav {
+nav {
     text-align: right;
     line-height: 70px;
 }
@@ -71,12 +70,13 @@ h3 {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 36px;
     font-weight: 400;
-    margin-left: 5px;
+    margin-left: 200px;
 }
 
 .episodios h3,
 .novedades h3 {
     color: #ffffff;
+    margin-top: 70px;
 }
 
 .episodios,
@@ -96,11 +96,13 @@ h3 {
     overflow: hidden;
 }
 
-.sesgo,
-.sesgo1 {
+.sesgos {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.sesgo {
     border-width: 15vh 100vw 0 0;
     border-style: solid;
     border-color: #fff transparent transparent transparent;
@@ -159,6 +161,7 @@ h3 {
 
 .novedades h3 {
     text-align: center;
+    margin: 70px auto auto;
 }
 
 .novedades {
@@ -239,10 +242,6 @@ footer .iconos {
 
     h3 {
         margin-top: 50px;
-    }
-
-    .episodios-h3 {
-        margin-left: 208px;
     }
 
     .wrap h3 {
