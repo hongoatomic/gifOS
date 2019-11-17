@@ -33,8 +33,7 @@ label {
 
 .menu a {
     text-decoration: none;
-    margin: 0 10px;
-    line-height: 70px;
+    margin: 0 25px;
 }
 
 .menu a:active {
@@ -70,13 +69,12 @@ h3 {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 36px;
     font-weight: 400;
-    margin-left: 200px;
 }
 
 .episodios h3,
 .novedades h3 {
     color: #ffffff;
-    margin-top: 70px;
+    margin: 70px 0 0 16px;
 }
 
 .episodios,
@@ -84,8 +82,9 @@ h3 {
     padding: 40px 0 100px 0;
     background: linear-gradient(
         90deg,
-        rgba(0, 0, 255, 1) 21%,
-        rgba(0, 0, 232, 1) 30%
+        rgba(0, 0, 163, 1) 14%,
+        rgba(0, 0, 207, 1) 44%,
+        rgba(0, 0, 255, 1) 74%
     );
 }
 
@@ -117,8 +116,14 @@ h3 {
 .iframes {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat (4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     justify-content: center;
+    border: none;
+}
+
+iframe {
+    border: none;
+    background-color: transparent;
 }
 
 .episodios iframe {
@@ -233,7 +238,7 @@ footer .iconos {
     }
 }
 
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 1024px) {
     .parent {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -241,7 +246,7 @@ footer .iconos {
     }
 
     h3 {
-        margin-top: 50px;
+        margin: 50px 5px 0px 200px;
     }
 
     .wrap h3 {
@@ -265,7 +270,7 @@ footer .iconos {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-row-gap: 72px;
-        padding: 0 100px 50px;
+        padding: 10px 100px 50px;
     }
     .iframes iframe {
         width: 500px;
