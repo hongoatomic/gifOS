@@ -50,6 +50,19 @@ label {
     display: none;
 }
 
+.toggle:checked + .menu {
+    display: block;
+}
+.closing-menu {
+    float: right;
+    font-size: 35px;
+    transform: rotate(45deg);
+}
+
+.main-bar {
+    display: none;
+}
+
 .hello {
     margin: 29px 16px 16px 16px;
 }
@@ -233,8 +246,14 @@ footer .iconos {
         color: white;
     }
 
-    .toggle:checked + .menu {
+    .main-bar {
+        height: 70px;
         display: block;
+    }
+
+    .menu {
+        top: 0;
+        background-color: white;
     }
 }
 
