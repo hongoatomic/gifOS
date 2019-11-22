@@ -24,12 +24,44 @@
             <label for="toggle">&#9776;</label>
             <input type="checkbox" id="toggle" class="toggle" />
             <div class="menu">
+                <!-- THE PART ADDED FOR MENU -->
+                <div class="main-bar">
+                    <div class="logo">
+                        <img src="images/logo.svg" alt="logo" />
+                    </div>
+                    <label class="closing-menu" for="toggle">+</label>
+                </div>
+                <!-- END -->
                 <a href="#episodios">Episodios</a>
                 <a href="#nosotros">Nosotros</a>
                 <a href="#entrevistas">Entrevistas</a>
                 <a href="#topicos">Tópicos</a>
             </div>
         </nav>
+
+        <style>
+            .closing-menu{
+                float:right;
+                font-size: 35px; 
+                transform:rotate(45deg);
+            }
+
+            .main-bar{
+                display: none;
+            }
+
+            @media only screen and (max-width: 768px){
+                .main-bar{
+                    height: 70px;
+                    display: block;
+                }
+
+                .menu {
+                    top: 0;
+                    background-color: white;
+                }
+            }
+        </style>
 
         <header class="hello">
             <h1>Hello <s>world</s> pale blue dot</h1>
