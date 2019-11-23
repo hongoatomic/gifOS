@@ -123,6 +123,7 @@ h3 {
 .sesgo1 {
     bottom: 0;
     border-width: 0 0 15vh 100vw;
+    border-style: solid;
     border-color: transparent transparent #fff transparent;
 }
 
