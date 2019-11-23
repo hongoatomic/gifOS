@@ -299,7 +299,7 @@ footer .iconos {
     .nosotros {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 50px, 1fr, 1fr;
+        grid-template-rows: 50px 1fr 1fr;
         grid-template-areas:
             "sesgo sesgo"
             "img h3"
