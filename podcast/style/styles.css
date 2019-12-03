@@ -86,6 +86,7 @@ h3 {
 
 .episodios h3,
 .novedades h3 {
+    padding-top: 40px;
     color: #ffffff;
     margin: 70px 0 0 16px;
 }
@@ -259,6 +260,11 @@ footer .iconos {
 }
 
 @media only screen and (min-width: 1024px) {
+    .menu a:active {
+        color: rgb(48, 52, 78);
+        text-decoration: line-through;
+    }
+
     .parent {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
