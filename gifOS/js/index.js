@@ -25,14 +25,12 @@ function search(q) {
 
                 const url = obj.images.fixed_height.url;
                 const height = obj.images.fixed_height.height;
-                const width = obj.images.fixed_height.width;
                 const title = obj.title;
 
                 resultsHTML += `<img
                 class="item"
             src="${url}"
             height="${height}"
-            width="${width}"
             alt="${title}"
             >`;
             });
