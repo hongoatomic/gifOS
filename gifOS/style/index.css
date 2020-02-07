@@ -1,1 +1,13 @@
+.container {
+    width: calc(200px * 4 + 3em);
+    margin: auto;
+}
 
+.results {
+    columns: 4;
+    column-gap: 1em;
+}
+
+.item {
+    margin-bottom: 1em;
+}
