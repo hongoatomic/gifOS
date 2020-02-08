@@ -1,3 +1,16 @@
+* {
+    font-family: "Chakra Petch", sans-serif;
+    color: #060a24;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
 nav {
     text-align: right;
     line-height: 70px;
@@ -8,8 +21,49 @@ nav {
     margin-left: 16px;
 }
 #search-form {
+    background: #e6e6e6;
+    border: 2px solid #b4b4b4;
+    margin-top: 10px;
     margin: 5px 0px;
 }
+
+#search-form::before {
+    content: "Buscar";
+    display: block;
+    color: white;
+    padding-left: 5px;
+    background: linear-gradient(
+        90deg,
+        rgba(65, 128, 240, 1) 12%,
+        rgba(247, 201, 243, 1) 89%
+    );
+    margin-bottom: 5px;
+}
+
+#search-input {
+    width: 88%;
+    margin: 0 0 5px 5px;
+    border-inline-start: none;
+    border-top-color: black;
+}
+
+.submit-search {
+    color: #b4b4b4;
+}
+
+.submit-search:active {
+    background-color: #f7c9f3;
+    color: black;
+}
+
+.fa-search {
+    color: #b4b4b4;
+}
+
+.fa-search:active {
+    color: black;
+}
+
 .container {
     width: calc(200px * 4 + 3em);
     margin: auto;
