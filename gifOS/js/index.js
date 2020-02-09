@@ -1,3 +1,10 @@
+const min = 10000;
+const max = 500000;
+let counter = Math.floor(Math.random() * (+max - +min)) + +min;
+document.getElementById("random").innerHTML =
+    "¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: " +
+    counter;
+
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
 const resultsEl = document.getElementById("results");

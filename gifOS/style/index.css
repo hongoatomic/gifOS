@@ -11,6 +11,19 @@
     font-size: 16px;
 }
 
+.random {
+    display: block;
+    color: white;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+    background: linear-gradient(
+        90deg,
+        rgba(65, 128, 240, 1) 12%,
+        rgba(247, 201, 243, 1) 89%
+    );
+    margin-bottom: 44px;
+}
+
 nav {
     text-align: right;
     line-height: 70px;
