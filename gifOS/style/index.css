@@ -40,6 +40,26 @@ nav {
     margin: 5px 0px;
 }
 
+#search-form-o {
+    background: #8f8f8f;
+    border: 2px solid #b4b4b4;
+    margin-top: 10px;
+    margin: 5px 0px;
+}
+
+#search-form-o::before {
+    content: "Buscar";
+    display: block;
+    color: white;
+    padding-left: 5px;
+    background: linear-gradient(
+        90deg,
+        rgba(46, 50, 251, 1) 12%,
+        rgba(238, 62, 254, 1) 89%
+    );
+    margin-bottom: 5px;
+}
+
 #search-form::before {
     content: "Buscar";
     display: block;

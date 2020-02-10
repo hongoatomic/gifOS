@@ -47,3 +47,32 @@ function search(q) {
             console.log(err.message);
         });
 }
+
+let temas = document.getElementById("themes");
+let logo = document
+    .getElementsByClassName("logo")[0]
+    .getElementsByTagName("img")[0];
+let form = document.getElementById("search-form");
+//let rand = document.getElementsById("random");
+
+function cambiarTemaOscuro() {
+    document.body.style.backgroundColor = "#110038";
+    logo.src = "./images/gifOF_logo_dark.png";
+    form.id = "search-form-o";
+    // rand.id = "rand-o";
+}
+
+function cambiarTemaClaro() {
+    document.body.style.backgroundColor = "white";
+    logo.src = "./images/gifOF_logo.png";
+    form.id = "search-form";
+    // rand.id = "rand-o";
+}
+
+function cambiarTema(v) {
+    if (v == "sailorD") {
+        cambiarTemaClaro();
+    } else if (v == "sailorN") {
+        cambiarTemaOscuro();
+    }
+}
