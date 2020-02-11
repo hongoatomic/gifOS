@@ -11,7 +11,7 @@
     font-size: 16px;
 }
 
-.random {
+.visitas {
     display: block;
     color: white;
     border-bottom: 1px solid black;
@@ -109,4 +109,16 @@ nav {
 .item {
     width: 200px;
     margin-bottom: 1em;
+}
+
+.fakeInput {
+    border: 2px solid #80687d;
+    width: 100%;
+    border-color: #80687d #e6dce4 #e6dce4 #80687d;
+    background-color: white;
+}
+
+#themes {
+    color: #110038;
+    background-color: #f7c9f3;
 }

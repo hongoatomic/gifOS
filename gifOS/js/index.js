@@ -1,23 +1,49 @@
 const min = 10000;
 const max = 500000;
 let counter = Math.floor(Math.random() * (+max - +min)) + +min;
-document.getElementById("random").innerHTML =
+document.getElementsByClassName("visitas")[0].innerHTML =
     "¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: " +
     counter;
+
+let apiKey = "QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
+fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=20`)
+    .then(response => response.json())
+    .then(json => {
+        json.data
+            .map(gif => gif.images.fixed_height.url)
+            .forEach(url => {
+                let img = document.createElement("img");
+                img.src = url;
+                document.body.appendChild(img);
+            });
+    })
+    .catch(error => (document.body.appendChild = error));
 
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
 const resultsEl = document.getElementById("results");
+const trendingEl = document.getElementById("trending");
+const sugerenciasEl = document.getElementById("sugerencias");
 
 searchForm.addEventListener("submit", function(e) {
     e.preventDefault();
     const q = searchInput.value;
     search(q);
+    trendingEl.innerHTML = "";
+    sugerenciasEl.innerHTML = "";
+
+    /*searchForm.innerHTML += `<input
+            id="search-input"
+            type="text"
+            value="Resultado sugerido"
+            autocomplete="off"
+            disabled
+        />`;*/
 });
 
 function search(q) {
-    const apikey = "QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
-    const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}`;
+    let apikey = "QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
+    const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}&limit=20`;
 
     fetch(path)
         .then(function(res) {
@@ -54,6 +80,10 @@ let logo = document
     .getElementsByTagName("img")[0];
 let form = document.getElementById("search-form");
 //let rand = document.getElementsById("random");
+
+temas.onchange = function() {
+    cambiarTema(this.value);
+};
 
 function cambiarTemaOscuro() {
     document.body.style.backgroundColor = "#110038";
