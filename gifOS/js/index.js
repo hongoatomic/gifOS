@@ -1,7 +1,7 @@
 const min = 10000;
 const max = 500000;
 let counter = Math.floor(Math.random() * (+max - +min)) + +min;
-document.getElementsByClassName("visitas")[0].innerHTML =
+document.getElementsByClassName("random")[0].innerHTML =
     "¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: " +
     counter;
 
@@ -73,6 +73,42 @@ function search(q) {
             console.log(err.message);
         });
 }
+
+/*const trendingEl = document.getElementById("trending");
+
+function tendencias() {
+    let apikey = "QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
+    const path = "https://api.giphy.com/v1/gifs/trending?QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
+
+    fetch(path)
+        .then(function(res) {
+            return res.json();
+        })
+        .then(function(json) {
+            console.log(json.data[0].images.fixed_height.url);
+            let resultsHTML = "";
+
+            json.data.forEach(function(obj) {
+                console.log(obj);
+
+                const url = obj.images.fixed_height.url;
+                const height = obj.images.fixed_height.height;
+                const title = obj.title;
+
+                trendingEl.innerHTML += `<img
+                class="item"
+            src="${url}"
+            height="${height}"
+            alt="${title}"
+            >`;
+            });
+            //trendingEl.innerHTML = resultsHTML;
+        })
+        .catch(function(err) {
+            console.log(err.message);
+        });
+}
+tendencias();*/
 
 let temas = document.getElementById("themes");
 let logo = document
