@@ -13,6 +13,9 @@
 
 .random {
     display: block;
+    height: 25px;
+    text-align: left;
+    line-height: normal;
     color: white;
     border-bottom: 1px solid black;
     padding-left: 5px;
@@ -26,7 +29,6 @@
 
 nav {
     text-align: right;
-    line-height: 70px;
 }
 
 .logo {
@@ -118,7 +120,22 @@ nav {
     background-color: white;
 }
 
-#themes {
+.botones {
     color: #110038;
     background-color: #f7c9f3;
+    height: 24px;
+    border: 1px solid #979797;
+    border-inline-start: none;
+    outline: 1px solid #979797;
+    outline-offset: -3px;
+}
+
+.misgifs {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.misgifs::first-letter {
+    text-decoration: underline;
+    text-decoration-color: black;
 }
