@@ -89,14 +89,14 @@ temas.onchange = function() {
 
 function cambiarTemaOscuro() {
     document.body.style.backgroundColor = "#110038";
-    logo.src = "./images/gifOF_logo_dark.png";
+    logo.src = "./assets/gifOF_logo_dark.png";
     form.id = "search-form-o";
     // rand.id = "rand-o";
 }
 
 function cambiarTemaClaro() {
     document.body.style.backgroundColor = "white";
-    logo.src = "./images/gifOF_logo.png";
+    logo.src = "./assets/gifOF_logo.png";
     form.id = "search-form";
     // rand.id = "rand-o";
 }
@@ -109,7 +109,7 @@ function cambiarTema(v) {
     }
 }
 
-/*fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&limit=20`)
+/*fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=burrito&rating=PG-13`)
     .then(response => response.json())
     .then(json => {
         json.data
@@ -129,4 +129,5 @@ function cambiarTema(v) {
     })
     .catch(function(err) {
         console.log(err.message);
-    });*/
+    });
+

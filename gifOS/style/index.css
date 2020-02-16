@@ -121,15 +121,20 @@ nav {
 }
 
 .botones {
-    color: #110038;
-    background-color: #f7c9f3;
-    height: 24px;
-    border: 1px solid #979797;
-    border-inline-start: none;
-    outline: 1px solid #979797;
-    outline-offset: -3px;
+    background: #f7c9f3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
 }
 
+.botones:hover,
+:active {
+    background: #e6bbe2;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
 .misgifs {
     text-decoration: none;
     display: inline-block;
@@ -138,4 +143,58 @@ nav {
 .misgifs::first-letter {
     text-decoration: underline;
     text-decoration-color: black;
+}
+
+.misgifs:active {
+    color: #524966;
+}
+
+.misgifs:hover {
+    border: 1px solid #110038;
+}
+
+.description-title {
+    height: 32px;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-left: 32px;
+    strong {
+        margin-left: 16px;
+    }
+}
+
+.description-content {
+    margin-left: 65px;
+}
+
+ol {
+    list-style-type: none;
+}
+.create-gif-btn-container {
+    margin-left: 305px;
+    padding-bottom: 20px;
+}
+
+.container-menu {
+    width: 684px;
+    margin-top: 7px;
+    margin-left: 80px;
+    background: #e6e6e6;
+    box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+}
+
+.create-gif-description::before {
+    content: "Crear Guifos";
+    display: block;
+    width: 675px;
+    margin-left: -38px;
+    color: white;
+    padding-left: 5px;
+    background: linear-gradient(
+        90deg,
+        rgba(65, 128, 240, 1) 12%,
+        rgba(247, 201, 243, 1) 89%
+    );
+    margin-bottom: 5px;
 }
