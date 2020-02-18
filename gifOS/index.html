@@ -4,13 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="icon" href="./assets/globe_img.png" type="image/png" />
         <link rel="     stylesheet" href="./style/index.css" />
         <link
             href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,600&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="video.html" />
-        <link rel="stylesheet" href="misguifos.html.html" />
+        <link rel="stylesheet" href="misguifos.html" />
         <script
             src="https://kit.fontawesome.com/ef073bb9f6.js"
             crossorigin="anonymous"
@@ -21,48 +22,49 @@
     </head>
     <body class="wrapper">
         <div class="container">
-            <header>
-                <nav>
-                    <div id="random" class="random"></div>
-                    <div class="logo">
-                        <img src="assets/gifOF_logo.png" alt="logo" />
-                    </div>
-                    <button class="botones">
-                        <a href="video.html"> Crear Guifos</a>
-                    </button>
-                    <select id="themes" class="botones">
-                        <option value="elegir">Elegir tema</option>
-                        <option value="sailorD">Sailor Day</option>
-                        <option value="sailorN">Sailor Night</option>
-                    </select>
-                    <a href="misguifos.html">
-                        <p class="misgifs">Mis Guifos</p></a
-                    >
-                </nav>
-                <form id="search-form">
-                    <input
-                        id="search-input"
-                        type="text"
-                        placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
-                        autocomplete="off"
-                    />
-                    <button type="submit" class="submit-search">
-                        <i class="fas fa-search"></i>
-                        Buscar
-                    </button>
-                </form>
-            </header>
-            <div id="results" class="results"></div>
-            <h3 class="fakeInput">
-                Sugerencias
-            </h3>
-            <div id="random-gif"></div>
-            <h3 class="fakeInput">
-                Tendencias
-            </h3>
-            <div id="trending" class="trending"></div>
+            <div class="grid">
+                <header>
+                    <nav>
+                        <div id="random" class="random"></div>
+                        <div class="logo">
+                            <img src="assets/gifOF_logo.png" alt="logo" />
+                        </div>
+                        <button class="botones">
+                            <a href="video.html"> Crear Guifos</a>
+                        </button>
+                        <select id="themes" class="botones">
+                            <option value="elegir">Elegir tema</option>
+                            <option value="sailorD">Sailor Day</option>
+                            <option value="sailorN">Sailor Night</option>
+                        </select>
+                        <a href="misguifos.html">
+                            <p class="misgifs">Mis Guifos</p></a
+                        >
+                    </nav>
+                    <form id="search-form">
+                        <input
+                            id="search-input"
+                            type="text"
+                            placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
+                            autocomplete="off"
+                        />
+                        <button type="submit" class="submit-search">
+                            <i class="fas fa-search"></i>
+                            Buscar
+                        </button>
+                    </form>
+                </header>
+                <div id="results" class="results"></div>
+                <h3 class="fakeInput">
+                    Sugerencias
+                </h3>
+                <div id="random-gif"></div>
+                <h3 class="fakeInput">
+                    Tendencias
+                </h3>
+                <div id="trending" class="trending"></div>
+            </div>
         </div>
-
         <script src="./js/index.js"></script>
     </body>
 </html>

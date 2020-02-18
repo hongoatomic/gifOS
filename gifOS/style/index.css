@@ -99,7 +99,7 @@ nav {
     color: black;
 }
 
-.container {
+.grid {
     width: calc(200px * 4 + 3em);
     margin: auto;
 }

@@ -6,16 +6,16 @@ document.getElementsByClassName("random")[0].innerHTML =
     counter;
 
 let apiKey = "QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
-fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=20`)
+const trending = fetch(
+    `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=20`
+)
     .then(response => response.json())
     .then(json => {
-        json.data
-            .map(gif => gif.images.fixed_height.url)
-            .forEach(url => {
-                let img = document.createElement("img");
-                img.src = url;
-                document.body.appendChild(img);
-            });
+        json.data.map(gif => {
+            let img = document.createElement("img");
+            img.src = gif.images.fixed_height.url;
+            document.getElementById("trending").appendChild(img);
+        });
     })
     .catch(error => (document.body.appendChild = error));
 
@@ -34,13 +34,13 @@ searchForm.addEventListener("submit", function(e) {
     randomGif.innerHTML = "";
     sugerenciasEl.innerHTML = "";
 
-    /*searchForm.innerHTML += `<input
+    searchForm.innerHTML += `<input
             id="search-input"
             type="text"
             value="Resultado sugerido"
             autocomplete="off"
             disabled
-        />`;*/
+        />`;
 });
 
 function search(q) {
@@ -52,12 +52,10 @@ function search(q) {
             return res.json();
         })
         .then(function(json) {
-            console.log(json.data[0].images.fixed_height.url);
+            console.log(json.data[0]);
             let resultsHTML = "";
 
             json.data.forEach(function(obj) {
-                console.log(obj);
-
                 const url = obj.images.fixed_height.url;
                 const height = obj.images.fixed_height.height;
                 const title = obj.title;
@@ -109,24 +107,18 @@ function cambiarTema(v) {
     }
 }
 
-/*fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=burrito&rating=PG-13`)
+const random = fetch(
+    `https://api.giphy.com/v1/gifs/search?q=suggested&api_key=QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p&limit=24`
+)
     .then(response => response.json())
     .then(json => {
-        json.data
-            //.map(gif => gif.images.fixed_height.url)
-            .forEach(url => {
-                let img = document.createElement("img");
-                img.src = url;
-                const height = obj.images.fixed_height.height;
-                const title = obj.title;
-                randomGif.innerHTML = `<img
-        class="item"
-    src="${url}"
-    height="${height}"
-    alt="${title}"
-    >`;
-            });
+        console.log(json.data);
+        json.data.map(gif => {
+            let img = document.createElement("img");
+            let titulo = document.createElement("p");
+            titulo = gif.title;
+            img.src = gif.images.fixed_height.url;
+            document.getElementById("random-gif").appendChild(img);
+        });
     })
-    .catch(function(err) {
-        console.log(err.message);
-    });*/
+    .catch(error => (document.body.appendChild = error));
