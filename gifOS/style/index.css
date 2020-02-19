@@ -11,7 +11,7 @@
     font-size: 16px;
 }
 
-.random {
+#random {
     display: block;
     height: 25px;
     text-align: left;
@@ -23,6 +23,22 @@
         90deg,
         rgba(65, 128, 240, 1) 12%,
         rgba(247, 201, 243, 1) 89%
+    );
+    margin-bottom: 44px;
+}
+
+#random-o {
+    display: block;
+    height: 25px;
+    text-align: left;
+    line-height: normal;
+    color: white;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+    background: linear-gradient(
+        90deg,
+        rgba(46, 50, 251, 1) 12%,
+        rgba(238, 62, 254, 1) 89%
     );
     margin-bottom: 44px;
 }

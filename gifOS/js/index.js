@@ -24,7 +24,7 @@ const searchInput = document.getElementById("search-input");
 const resultsEl = document.getElementById("results");
 const trendingEl = document.getElementById("trending");
 const randomGif = document.getElementById("random-gif");
-const sugerenciasEl = document.getElementById("sugerencias");
+const fakeInput = document.getElementsByTagName("h3")[0];
 
 searchForm.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -32,15 +32,30 @@ searchForm.addEventListener("submit", function(e) {
     search(q);
     trendingEl.innerHTML = "";
     randomGif.innerHTML = "";
-    sugerenciasEl.innerHTML = "";
+    fakeInput.innerHTML = "";
 
-    searchForm.innerHTML += `<input
+    searchForm.innerHTML +=
+        ` <input
             id="search-input"
             type="text"
             value="Resultado sugerido"
             autocomplete="off"
             disabled
-        />`;
+        />` +
+        ` <input
+        id="search-input"
+        type="text"
+        value="Resultado sugerido"
+        autocomplete="off"
+        disabled
+    />` +
+        ` <input
+    id="search-input"
+    type="text"
+    value="Resultado sugerido"
+    autocomplete="off"
+    disabled
+/>`;
 });
 
 function search(q) {
@@ -79,7 +94,8 @@ let logo = document
     .getElementsByClassName("logo")[0]
     .getElementsByTagName("img")[0];
 let form = document.getElementById("search-form");
-//let rand = document.getElementsById("random");
+let rand = document.getElementById("random");
+let misgifs = document.getElementsByClassName("misgifs")[0];
 
 temas.onchange = function() {
     cambiarTema(this.value);
@@ -89,14 +105,16 @@ function cambiarTemaOscuro() {
     document.body.style.backgroundColor = "#110038";
     logo.src = "./assets/gifOF_logo_dark.png";
     form.id = "search-form-o";
-    // rand.id = "rand-o";
+    rand.id = "random-o";
+    misgifs.style.color = "#FFFFFF ";
 }
 
 function cambiarTemaClaro() {
-    document.body.style.backgroundColor = "white";
+    document.body.style.backgroundColor = "#FFFFFF ";
     logo.src = "./assets/gifOF_logo.png";
     form.id = "search-form";
-    // rand.id = "rand-o";
+    rand.id = "random";
+    misgifs.style.color = "#110038";
 }
 
 function cambiarTema(v) {
@@ -108,7 +126,7 @@ function cambiarTema(v) {
 }
 
 const random = fetch(
-    `https://api.giphy.com/v1/gifs/search?q=suggested&api_key=QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p&limit=24`
+    `https://api.giphy.com/v1/gifs/search?q=random&api_key=QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p&limit=4`
 )
     .then(response => response.json())
     .then(json => {
