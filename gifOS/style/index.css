@@ -43,6 +43,10 @@
     margin-bottom: 44px;
 }
 
+#random-gif {
+    display: flex;
+}
+
 nav {
     text-align: right;
 }
