@@ -24,7 +24,8 @@ const searchInput = document.getElementById("search-input");
 const resultsEl = document.getElementById("results");
 const trendingEl = document.getElementById("trending");
 const randomGif = document.getElementById("random-gif");
-const fakeInput = document.getElementsByTagName("h3")[0];
+const fakeInput = document.querySelector("h3.fakeInput");
+const fakeInput2 = document.querySelector("h3.fakeInput:last-of-type");
 
 searchForm.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -33,6 +34,9 @@ searchForm.addEventListener("submit", function(e) {
     trendingEl.innerHTML = "";
     randomGif.innerHTML = "";
     fakeInput.innerHTML = "";
+    fakeInput2.innerHTML = "";
+    fakeInput.style.border = "none";
+    fakeInput2.style.border = "none";
 
     searchForm.innerHTML +=
         ` <input
@@ -106,11 +110,11 @@ function cambiarTemaOscuro() {
     logo.src = "./assets/gifOF_logo_dark.png";
     form.id = "search-form-o";
     rand.id = "random-o";
-    misgifs.style.color = "#FFFFFF ";
+    misgifs.style.color = "#FFFFFF";
 }
 
 function cambiarTemaClaro() {
-    document.body.style.backgroundColor = "#FFFFFF ";
+    document.body.style.backgroundColor = "#FFFFFF";
     logo.src = "./assets/gifOF_logo.png";
     form.id = "search-form";
     rand.id = "random";
