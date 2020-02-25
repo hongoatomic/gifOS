@@ -99,6 +99,20 @@ function stopRecordingCallback() {
     recorder = null;
 }
 
+// miGif = [];
+// let resultsGifs = document.getElementById("resultadosmisgifs");
+
+// function misGuifos() {
+//     let img = "";
+//     for (let i = 0; i < localStorage.length; i++) {
+//         let key = "myGifos-" + i;
+//         miGif[i] = localStorage.getItem(key);
+//         img += '<img src="' + miGif[i] + '">';
+//     }
+//     resultsGifs.innerHTML = img;
+// }
+// misGuifos();
+// console.log(miGif);
 /* Doc here https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch */
 
 async function postToGiphy(formData) {

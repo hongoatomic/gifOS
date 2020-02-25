@@ -38,11 +38,15 @@ searchForm.addEventListener("submit", function(e) {
     fakeInput.style.border = "none";
     fakeInput2.style.border = "none";
 
-    searchForm.innerHTML +=
+    let resultadoSugerido = document.getElementById("resultadoSugerido");
+    let resultadosSugeridos = ["cat", "dog", "unicorn", "mouse"];
+    let aleatorio = Math.round(Math.random() * 4);
+
+    resultadoSugerido.innerHTML =
         ` <input
             id="search-input"
             type="text"
-            value="Resultado sugerido"
+            value="${resultadosSugeridos[aleatorio]}"
             autocomplete="off"
             disabled
         />` +
