@@ -4,7 +4,7 @@ let counter = Math.floor(Math.random() * (+max - +min)) + +min;
 document.getElementsByClassName("random")[0].innerHTML =
     "¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: " +
     counter;
-
+// funcion seccion trending
 let apiKey = "QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
 const trending = fetch(
     `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=20`
@@ -65,7 +65,7 @@ searchForm.addEventListener("submit", function(e) {
     disabled
 />`;
 });
-
+// funcion search
 function search(q) {
     let apikey = "QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
     const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}&limit=20`;
