@@ -2,14 +2,22 @@ let comenzar = document.getElementById("record");
 let detener = document.getElementById("stop");
 let video = document.querySelector("video");
 let recorder;
-const apiKey = "api_key=QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
+apiKey = "api_key=QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
+let stopBoton = document.querySelector("button#stop");
 
 comenzar.onclick = function() {
     record();
+    stopBoton.style.display = "inline";
+    comenzar.style.display = "none";
 };
 detener.onclick = function() {
     stop();
+    comenzar.style.display = "inline";
+    comenzar.innerHTML = "repetir captura";
+    comenzar.parentNode.innerHTML += `<button class="boton-repetir"> Subir Guifo </button>`;
 };
+
+stopBoton.style.display = "none";
 
 // RECORD
 function record() {
@@ -38,6 +46,8 @@ function record() {
         detener.disabled = false;
     });
 }
+
+let urlCopy;
 
 function getStreamAndRecord(callback) {
     navigator.mediaDevices //para permitir que el navegador acceda a los devices
@@ -88,6 +98,7 @@ function stopRecordingCallback() {
             .then(function(json) {
                 console.log(json.data);
                 const url = json.data.images.fixed_height.url;
+                urlCopy = json.data.images.fixed_height.url;
 
                 // registrar el nuevo gif en local storage con sur url
                 // localStorage.length will help for the loop to get them back after, first one saved will be myGifos-1, second one myGifos-2...

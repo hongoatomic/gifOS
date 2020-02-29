@@ -1,3 +1,5 @@
+let copiarEnlance = document.getElementsByClassName("copiar-enlace")[0];
+
 miGif = [];
 let resultsGifs = document.getElementById("resultadosmisgifs");
 
@@ -12,3 +14,12 @@ function misGuifos() {
 }
 misGuifos();
 console.log(miGif);
+
+copiarEnlance.onclick = function() {
+    var aux = document.createElement("input");
+    aux.setAttribute("value", urlCopy);
+    document.body.appendChild(aux);
+    aux.select();
+    document.execCommand("copy");
+    document.body.removeChild(aux);
+};

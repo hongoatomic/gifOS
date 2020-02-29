@@ -44,6 +44,7 @@ resultSugeridos3.id = "search-sugerencia3";
 resultSugeridos1.style.cursor = "pointer";
 resultSugeridos2.style.cursor = "pointer";
 resultSugeridos3.style.cursor = "pointer";
+let fakeInput01 = document.querySelector(".fakeInput01");
 
 searchForm.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -55,37 +56,15 @@ searchForm.addEventListener("submit", function(e) {
     fakeInput2.innerHTML = "";
     fakeInput.style.border = "none";
     fakeInput2.style.border = "none";
+    fakeInput01.innerHTML = `<input value= "${q}" readonly>  `;
     crearTags();
 
     resultadoSugerido.appendChild(resultSugeridos1);
     resultadoSugerido.appendChild(resultSugeridos2);
     resultadoSugerido.appendChild(resultSugeridos3);
-    //     resultadoSugerido.innerHTML =
-    //         `        <input
-    //             id="search-sugerencia1"
-    //             style="cursor:pointer"
-    //             type="text"
-    //             value="${resultadosSugeridos1[aleatorio]}"
-    //             autocomplete="off"
-    //             disabled
-    //         />` +
-    //         ` <input
-    //         id="search-sugerencia2"
-    //         style="cursor:pointer"
-    //         type="text"
-    //         value="${resultadosSugeridos2[aleatorio]}"
-    //         autocomplete="off"
-    //         disabled
-    //     />` +
-    //         ` <input
-    //     id="search-sugerencia3"
-    //     style="cursor:pointer"
-    //     type="text"
-    //     value="${resultadosSugeridos3[aleatorio]}"
-    //     autocomplete="off"
-    //     disabled
-    // />`;
+    // resultSugeridos1.className = "repetir el nombre en los otros resultados";
 });
+
 aleatorio = Math.round(Math.random() * 4);
 resultSugeridos1.onclick = function() {
     search(resultSugeridos1.value);
@@ -119,9 +98,10 @@ function crearTags() {
 
     let tag = document.createElement("button");
     console.log(padre);
-    padre.insertBefore(tag, resultsEl);
+    padre.insertBefore(tag, fakeInput01);
     tag.innerHTML = tags[i];
-    tag.style.background = "blue";
+    tag.style.background = "#4180F6";
+    tag.style.color = "#fff";
     i++;
 }
 
@@ -157,54 +137,25 @@ function search(q) {
         });
 }
 
-let temas = document.getElementById("themes");
-let logo = document
-    .getElementsByClassName("logo")[0]
-    .getElementsByTagName("img")[0];
-let form = document.getElementById("search-form");
-let rand = document.getElementById("random");
-let misgifs = document.getElementsByClassName("misgifs")[0];
-
-temas.onchange = function() {
-    cambiarTema(this.value);
-};
-
-function cambiarTemaOscuro() {
-    document.body.style.backgroundColor = "#110038";
-    logo.src = "./assets/gifOF_logo_dark.png";
-    form.id = "search-form-o";
-    rand.id = "random-o";
-    misgifs.style.color = "#FFFFFF";
-}
-
-function cambiarTemaClaro() {
-    document.body.style.backgroundColor = "#FFFFFF";
-    logo.src = "./assets/gifOF_logo.png";
-    form.id = "search-form";
-    rand.id = "random";
-    misgifs.style.color = "#110038";
-}
-
-function cambiarTema(v) {
-    if (v == "sailorD") {
-        cambiarTemaClaro();
-    } else if (v == "sailorN") {
-        cambiarTemaOscuro();
-    }
-}
-
 const random = fetch(
     `https://api.giphy.com/v1/gifs/search?q=random&api_key=QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p&limit=4`
 )
     .then(response => response.json())
     .then(json => {
         console.log(json.data);
-        json.data.map(gif => {
-            let img = document.createElement("img");
-            let titulo = document.createElement("p");
-            titulo = gif.title;
-            img.src = gif.images.fixed_height.url;
-            document.getElementById("random-gif").appendChild(img);
+        let resultsHTML = "";
+        json.data.map(obj => {
+            const url = obj.images.fixed_height.url;
+            const height = obj.images.fixed_height.height;
+            const title = obj.title;
+
+            resultsHTML += ` <p class="title-gif"> ${title}</p>
+            <img
+                class="item"
+            src="${url}"
+            height="${height}"
+            alt="${title}"
+            > <button class="boton-gif"> <a href="${url}">Ver más</a></button>`;
         });
-    })
-    .catch(error => (document.body.appendChild = error));
+        randomGif.innerHTML = resultsHTML;
+    });
