@@ -1,24 +1,16 @@
-const min = 10000;
-const max = 500000;
-let counter = Math.floor(Math.random() * (+max - +min)) + +min;
-document.getElementsByClassName("random")[0].innerHTML =
-    "¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: " +
-    counter;
-// funcion seccion trending
-let apiKey = "QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
-const trending = fetch(
-    `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=20`
-)
-    .then(response => response.json())
-    .then(json => {
-        json.data.map(gif => {
-            let img = document.createElement("img");
-            img.src = gif.images.fixed_height.url;
-            document.getElementById("trending").appendChild(img);
-        });
-    })
-    .catch(error => (document.body.appendChild = error));
+//FUNCION COUNTER VISITAS
 
+let n = localStorage.getItem("on_load_counter");
+if (n === null) {
+    n = 0;
+}
+n++;
+localStorage.setItem("on_load_counter", n);
+document.getElementById("counter").innerHTML =
+    "¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: " +
+    n;
+
+//VARIABLES
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
 const resultsEl = document.getElementById("results");
@@ -28,10 +20,50 @@ const fakeInput = document.querySelector("h3.fakeInput");
 const fakeInput2 = document.querySelector("h3.fakeInput:last-of-type");
 let tags = [];
 let resultadoSugerido = document.getElementById("resultadoSugerido");
-let resultadosSugeridos1 = ["cat", "dog", "unicorn", "mouse"];
-let resultadosSugeridos2 = ["orange", "banana", "apple", "grape"];
-let resultadosSugeridos3 = ["html", "css", "javascript", "java"];
-let aleatorio = Math.round(Math.random() * 4);
+let resultadosSugeridos1 = [
+    "Cat",
+    "Dog",
+    "Unicorn",
+    "Mouse",
+    "Dragon",
+    "Horse",
+    "Hamster",
+    "Cow",
+    "Sheep",
+    "Pig",
+    "Monkey",
+    "Lion"
+];
+let resultadosSugeridos2 = [
+    "Orange",
+    "Banana",
+    "Apple",
+    "Grape",
+    "Blackberries",
+    "Avocado",
+    "Cherries",
+    "Figs",
+    "Mango",
+    "Passion Fruit",
+    "Raspberries",
+    "Papaya"
+];
+let resultadosSugeridos3 = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Java",
+    "PHP",
+    "Ruby",
+    "C#",
+    "Python",
+    "C",
+    "SQL",
+    "Github",
+    "Programming"
+];
+
+let aleatorio = Math.round(Math.random() * 12);
 let resultSugeridos1 = document.createElement("input");
 let resultSugeridos2 = document.createElement("input");
 let resultSugeridos3 = document.createElement("input");
@@ -46,6 +78,7 @@ resultSugeridos2.style.cursor = "pointer";
 resultSugeridos3.style.cursor = "pointer";
 let fakeInput01 = document.querySelector(".fakeInput01");
 
+//EVENTO PARA SUBMIT
 searchForm.addEventListener("submit", function(e) {
     e.preventDefault();
     const q = searchInput.value;
@@ -58,14 +91,18 @@ searchForm.addEventListener("submit", function(e) {
     fakeInput2.style.border = "none";
     fakeInput01.innerHTML = `<input value= "${q}" readonly>  `;
     crearTags();
+});
 
+searchInput.onclick = function() {
     resultadoSugerido.appendChild(resultSugeridos1);
     resultadoSugerido.appendChild(resultSugeridos2);
     resultadoSugerido.appendChild(resultSugeridos3);
-    // resultSugeridos1.className = "repetir el nombre en los otros resultados";
-});
+    resultSugeridos1.className = "boton-resultados";
+    resultSugeridos2.className = "boton-resultados";
+    resultSugeridos3.className = "boton-resultados";
+};
 
-aleatorio = Math.round(Math.random() * 4);
+aleatorio = Math.round(Math.random() * 12);
 resultSugeridos1.onclick = function() {
     search(resultSugeridos1.value);
     searchInput.value = resultSugeridos1.value;
@@ -89,6 +126,8 @@ resultSugeridos3.onclick = function() {
     resultSugeridos2.value = resultadosSugeridos2[aleatorio];
     resultSugeridos3.value = resultadosSugeridos3[aleatorio];
 };
+
+//FUNCION CREAR TAGS
 let i = 0;
 
 function crearTags() {
@@ -105,7 +144,7 @@ function crearTags() {
     i++;
 }
 
-// funcion search
+// FUNCION SEARCH
 function search(q) {
     let apikey = "QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
     const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}&limit=20`;
@@ -137,6 +176,7 @@ function search(q) {
         });
 }
 
+// FUNCION "HOY TE SUGERIMOS"
 const random = fetch(
     `https://api.giphy.com/v1/gifs/search?q=random&api_key=QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p&limit=4`
 )
@@ -155,7 +195,30 @@ const random = fetch(
             src="${url}"
             height="${height}"
             alt="${title}"
-            > <button class="boton-gif"> <a href="${url}">Ver más</a></button>`;
+            > <button id="boton-gif"> <a href="${url}" class="a-gif">Ver más</a></button>`;
         });
         randomGif.innerHTML = resultsHTML;
+    });
+
+// FUNCION "TENDENCIAS"
+let apiKey = "QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
+const trending = fetch(
+    `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=20`
+)
+    .then(response => response.json())
+    .then(json => {
+        let resultsHTML = "";
+        json.data.map(obj => {
+            const url = obj.images.fixed_height.url;
+            const height = obj.images.fixed_height.height;
+            const title = obj.title;
+
+            resultsHTML += ` <img
+            class="item"
+        src="${url}"
+        height="${height}"
+        alt="${title}"
+        >`;
+        });
+        trendingEl.innerHTML = resultsHTML;
     });

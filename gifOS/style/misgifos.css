@@ -51,7 +51,27 @@
     margin-right: 10px;
 }
 
-.captura-gif {
+#captura-gif {
+    width: 721px;
+    height: 391px;
+    margin: auto;
+    margin-bottom: 180px;
+    background: #e6e6e6;
+    box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+}
+#captura-gif::before {
+    content: "Guifo Subido Con Éxito";
+    color: white;
+    display: block;
+    background: linear-gradient(
+        90deg,
+        rgba(65, 128, 240, 1) 12%,
+        rgba(247, 201, 243, 1) 89%
+    );
+    margin-left: 2px;
+}
+
+#captura-gif-o {
     width: 721px;
     height: 391px;
     margin: auto;
@@ -60,14 +80,14 @@
     box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
 }
 
-.captura-gif::before {
+#captura-gif-o::before {
     content: "Guifo Subido Con Éxito";
     color: white;
     display: block;
     background: linear-gradient(
         90deg,
-        rgba(65, 128, 240, 1) 12%,
-        rgba(247, 201, 243, 1) 89%
+        rgba(46, 50, 251, 1) 12%,
+        rgba(238, 62, 254, 1) 89%
     );
     margin-left: 2px;
 }

@@ -11,7 +11,7 @@
     font-size: 16px;
 }
 
-#random {
+#counter {
     display: block;
     height: 25px;
     text-align: left;
@@ -27,7 +27,7 @@
     margin-bottom: 44px;
 }
 
-#random-o {
+#counter-o {
     display: block;
     height: 25px;
     text-align: left;
@@ -138,6 +138,7 @@ nav {
     width: 100%;
     border-color: #80687d #e6dce4 #e6dce4 #80687d;
     background-color: white;
+    text-indent: 5px;
 }
 
 .botones {
@@ -201,7 +202,7 @@ ol {
     box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
 }
 
-.create-gif-description::before {
+#create-gif-description::before {
     content: "Crear Guifos";
     display: block;
     width: 675px;
@@ -214,4 +215,43 @@ ol {
         rgba(247, 201, 243, 1) 89%
     );
     margin-bottom: 5px;
+}
+
+#create-gif-description-o::before {
+    content: "Crear Guifos";
+    display: block;
+    width: 675px;
+    margin-left: -38px;
+    color: white;
+    padding-left: 5px;
+    background: linear-gradient(
+        90deg,
+        rgba(46, 50, 251, 1) 12%,
+        rgba(238, 62, 254, 1) 89%
+    );
+    margin-bottom: 5px;
+}
+
+.boton-resultados {
+    display: block;
+    background: #f0f0f0;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+    width: 89%;
+    margin: 5px 0px 0px 2px;
+    padding-bottom: 2px;
+    text-indent: 5px;
+}
+
+.boton-resultados:hover {
+    background: #d6d6d6;
+}
+
+.title-gif {
+    color: white;
+    background: linear-gradient(
+        90deg,
+        rgba(65, 128, 240, 1) 12%,
+        rgba(247, 201, 243, 1) 89%
+    );
 }
