@@ -89,7 +89,7 @@ searchForm.addEventListener("submit", function(e) {
     fakeInput2.innerHTML = "";
     fakeInput.style.border = "none";
     fakeInput2.style.border = "none";
-    fakeInput01.innerHTML = `<input value= "${q}" readonly>  `;
+    fakeInput01.innerHTML = `<input value= "${q}" readonly class="inputFake">  `;
     crearTags();
 });
 
@@ -141,6 +141,7 @@ function crearTags() {
     tag.innerHTML = tags[i];
     tag.style.background = "#4180F6";
     tag.style.color = "#fff";
+    tag.style.margin = "5px";
     i++;
 }
 
@@ -189,7 +190,7 @@ const random = fetch(
             const height = obj.images.fixed_height.height;
             const title = obj.title;
 
-            resultsHTML += ` <div id="div-sugeridos"> <p class="title-gif"> ${title} <img
+            resultsHTML += ` <div id="div-sugeridos"> <p id="titlegif"> ${title} <img
             src="assets/button3.svg"
             alt="boton cierre ventana"
             class="boton-cierre"

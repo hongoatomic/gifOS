@@ -22,54 +22,49 @@
     </head>
     <body class="wrapper">
         <div class="container">
-            <div class="grid">
-                <header>
-                    <nav>
-                        <div id="counter"></div>
-                        <div class="logo">
-                            <img
-                                src="assets/gifOF_logo.png"
-                                alt="logo"
-                                class="logoIndex"
-                            />
-                        </div>
-                        <button class="botones">
-                            <a href="video.html"> Crear Guifos</a>
-                        </button>
-                        <select id="themes" class="botones">
-                            <option value="elegir">Elegir tema</option>
-                            <option value="sailorD">Sailor Day</option>
-                            <option value="sailorN">Sailor Night</option>
-                        </select>
-                        <a href="misguifos.html">
-                            <p class="misgifs">Mis Guifos</p></a
-                        >
-                    </nav>
-                    <form id="search-form">
-                        <input
-                            id="search-input"
-                            type="text"
-                            placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
-                            autocomplete="off"
-                        />
-                        <button type="submit" class="submit-search">
-                            <i class="fas fa-search"></i>
-                            Buscar
-                        </button>
-                        <div id="resultadoSugerido"></div>
-                    </form>
-                </header>
-                <div class="fakeInput01"></div>
-                <div id="results" class="results"></div>
-                <h3 class="fakeInput">
-                    Hoy te sugerimos:
-                </h3>
-                <div id="random-gif" class="results"></div>
-                <h3 class="fakeInput">
-                    Tendencias:
-                </h3>
-                <div id="trending" class="trending"></div>
-            </div>
+            <header id="counter"></header>
+
+            <nav>
+                <div class="logo">
+                    <img
+                        src="assets/gifOF_logo.png"
+                        alt="logo"
+                        class="logoIndex"
+                    />
+                </div>
+                <button class="botones">
+                    <a href="video.html"> Crear Guifos</a>
+                </button>
+                <select id="themes" class="botones">
+                    <option value="elegir">Elegir tema</option>
+                    <option value="sailorD">Sailor Day</option>
+                    <option value="sailorN">Sailor Night</option>
+                </select>
+                <a href="misguifos.html"> <p class="misgifs">Mis Guifos</p></a>
+            </nav>
+            <form id="search-form">
+                <input
+                    id="search-input"
+                    type="text"
+                    placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
+                    autocomplete="off"
+                />
+                <button type="submit" class="submit-search">
+                    <i class="fas fa-search"></i>
+                    Buscar
+                </button>
+                <div id="resultadoSugerido"></div>
+            </form>
+            <div class="fakeInput01"></div>
+            <div id="results" class="results grid"></div>
+            <h3 class="fakeInput">
+                Hoy te sugerimos:
+            </h3>
+            <div id="random-gif" class="results grid"></div>
+            <h3 class="fakeInput">
+                Tendencias:
+            </h3>
+            <div id="trending" class="trending grid"></div>
         </div>
         <script src="./js/index.js"></script>
         <script src="./js/themes.js"></script>
