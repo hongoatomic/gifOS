@@ -20,6 +20,7 @@ const fakeInput = document.querySelector("h3.fakeInput");
 const fakeInput2 = document.querySelector("h3.fakeInput:last-of-type");
 let tags = [];
 let resultadoSugerido = document.getElementById("resultadoSugerido");
+
 let resultadosSugeridos1 = [
     "Cat",
     "Dog",
@@ -89,7 +90,7 @@ searchForm.addEventListener("submit", function(e) {
     fakeInput2.innerHTML = "";
     fakeInput.style.border = "none";
     fakeInput2.style.border = "none";
-    fakeInput01.innerHTML = `<input value= "${q}" readonly class="inputFake">  `;
+    fakeInput01.innerHTML = `<input value= "${q}" readonly class="inputFake fakeInput01">  `;
     crearTags();
 });
 
@@ -100,6 +101,9 @@ searchInput.onclick = function() {
     resultSugeridos1.className = "boton-resultados";
     resultSugeridos2.className = "boton-resultados";
     resultSugeridos3.className = "boton-resultados";
+    document.getElementsByClassName("boton-resultados")[0].readOnly = true;
+    document.getElementsByClassName("boton-resultados")[1].readOnly = true;
+    document.getElementsByClassName("boton-resultados")[2].readOnly = true;
 };
 
 aleatorio = Math.round(Math.random() * 12);
@@ -127,21 +131,21 @@ resultSugeridos3.onclick = function() {
     resultSugeridos3.value = resultadosSugeridos3[aleatorio];
 };
 
+tags.onclick = function() {
+    search();
+};
+
 //FUNCION CREAR TAGS
 let i = 0;
 
 function crearTags() {
     let padre = resultsEl.parentNode;
-
     tags.push("#" + searchInput.value + " ");
-
     let tag = document.createElement("button");
     console.log(padre);
     padre.insertBefore(tag, fakeInput01);
     tag.innerHTML = tags[i];
-    tag.style.background = "#4180F6";
-    tag.style.color = "#fff";
-    tag.style.margin = "5px";
+    tag.className = "boton-tags";
     i++;
 }
 

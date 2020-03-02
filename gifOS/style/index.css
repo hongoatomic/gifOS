@@ -156,8 +156,19 @@ nav {
 }
 
 .fakeInput01 {
-    width: 90%;
+    width: 100%;
+}
+
+.form-tags {
+    display: block;
+    width: 80%;
     margin: auto;
+    margin-top: 2%;
+}
+
+.boton-tags {
+    background-color: #4180f6;
+    color: #fff;
 }
 
 .botones {
@@ -260,6 +271,7 @@ ol {
     margin: 5px 0px 0px 2px;
     padding-bottom: 2px;
     text-indent: 5px;
+    height: 35px;
 }
 
 .boton-resultados:hover {
