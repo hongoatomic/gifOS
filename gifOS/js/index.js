@@ -200,7 +200,7 @@ const random = fetch(
             src="${url}"
             height="${height}"
             alt="${title}"
-            ><div id="img-boton">  <button id="boton-gif"> <a href="${url}" class="a-gif">Ver más... </a></button></div> </div>`;
+            ><div id="img-boton">  <button id="boton-gif"> <a href="${url}"  target="_blank" class="a-gif">Ver más... </a></button></div> </div>`;
         });
         randomGif.innerHTML = resultsHTML;
     });
@@ -208,7 +208,7 @@ const random = fetch(
 // FUNCION "TENDENCIAS"
 let apiKey = "QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
 const trending = fetch(
-    `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=20`
+    `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=24`
 )
     .then(response => response.json())
     .then(json => {
