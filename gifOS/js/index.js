@@ -178,7 +178,7 @@ function search(q) {
 
 // FUNCION "HOY TE SUGERIMOS"
 const random = fetch(
-    `https://api.giphy.com/v1/gifs/search?q=random&api_key=QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p&limit=4`
+    `https://api.giphy.com/v1/gifs/search?q=seinfeld&api_key=QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p&limit=4`
 )
     .then(response => response.json())
     .then(json => {
@@ -189,13 +189,18 @@ const random = fetch(
             const height = obj.images.fixed_height.height;
             const title = obj.title;
 
-            resultsHTML += ` <p class="title-gif"> ${title}</p>
+            resultsHTML += ` <div id="div-sugeridos"> <p class="title-gif"> ${title} <img
+            src="assets/button3.svg"
+            alt="boton cierre ventana"
+            class="boton-cierre"
+        /></p>
+        
             <img
                 class="item"
             src="${url}"
             height="${height}"
             alt="${title}"
-            > <button id="boton-gif"> <a href="${url}" class="a-gif">Ver más</a></button>`;
+            ><div id="img-boton">  <button id="boton-gif"> <a href="${url}" class="a-gif">Ver más... </a></button></div> </div>`;
         });
         randomGif.innerHTML = resultsHTML;
     });
