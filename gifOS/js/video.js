@@ -80,7 +80,7 @@ function stopRecordingCallback() {
 
     // Create the FormData to send to giphy
     let form = new FormData();
-    var blob = recorder.getBlob();
+    let blob = recorder.getBlob();
     form.append("file", blob, "myGif.gif");
     //console.log(form.get('file'));
 

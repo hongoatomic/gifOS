@@ -1,14 +1,12 @@
 .video {
-    width: 832px;
-    height: 434px;
-    margin: 30px 0px 0px 15px;
+    width: 365px;
+    height: 191px;
+    margin: 28px 0px 0px 15px;
 }
 
 .video-frame {
     margin: 0 auto;
     margin-top: 30px;
-    width: 860px;
-    height: 552px;
     background: #e6e6e6;
     box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
 }
@@ -59,43 +57,42 @@
     background: #e6e6e6;
     box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
 }
-#captura-gif::before {
-    content: "Guifo Subido Con Éxito";
-    color: white;
-    display: block;
+
+.captura-gif-title {
+    margin-top: 3%;
     background: linear-gradient(
         90deg,
         rgba(65, 128, 240, 1) 12%,
         rgba(247, 201, 243, 1) 89%
     );
-    margin-left: 2px;
 }
-
-#captura-gif-o {
-    width: 721px;
-    height: 391px;
-    margin: auto;
-    margin-bottom: 180px;
-    background: #e6e6e6;
-    box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
-}
-
-#captura-gif-o::before {
+#captura-gif-title::before {
     content: "Guifo Subido Con Éxito";
     color: white;
-    display: block;
+    margin-left: 2px;
+    margin-top: 20px;
+}
+
+#captura-gif-title-o {
+    margin-top: 3%;
     background: linear-gradient(
         90deg,
         rgba(46, 50, 251, 1) 12%,
         rgba(238, 62, 254, 1) 89%
     );
+}
+
+#captura-gif-title-o::before {
+    content: "Guifo Subido Con Éxito";
+    color: white;
     margin-left: 2px;
+    margin-top: 20px;
 }
 
 .botonGif {
     display: inline-grid;
     float: right;
-    margin-right: 110px;
+    margin: 40px 60px 0px 0px;
 }
 
 .botones-gif {
@@ -108,9 +105,20 @@
 
 .descargar-gif {
     margin-top: 14px;
-    margin-bottom: 111px;
+    margin-bottom: 75px;
 }
 
 .title-save {
     font-weight: bold;
+}
+
+#resultadosmisgifs {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    width: 80%;
+    margin: auto;
 }

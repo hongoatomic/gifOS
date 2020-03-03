@@ -3,8 +3,7 @@ let logo = document
     .getElementsByClassName("logo")[0]
     .getElementsByClassName("go-home")[0]
     .getElementsByTagName("img")[1];
-let gifBox = document.getElementById("captura-gif");
-let streamCamara = document.getElementById("create-gif-description");
+let gifBox = document.getElementById("captura-gif-title");
 let counter = document.getElementById("counter");
 
 temas.onchange = function() {
@@ -15,8 +14,7 @@ function cambiarTemaOscuro() {
     document.body.style.backgroundColor = "#110038";
     logo.src = "./assets/gifOF_logo_dark.png";
     counter.id = "counter-o";
-    gifBox.id = "captura-gif-o";
-    streamCamara.id = "create-gif-description";
+    gifBox.id = "captura-gif-title-o";
     misgifs.style.color = "#FFFFFF";
 }
 
@@ -24,8 +22,7 @@ function cambiarTemaClaro() {
     document.body.style.backgroundColor = "#FFF4FD";
     logo.src = "./assets/gifOF_logo.png";
     counter.id = "counter";
-    gifBox.id = "captura-gif";
-    streamCamara.id = "create-gif-description-o";
+    gifBox.id = "captura-gif-title";
     misgifs.style.color = "#110038";
 }
 

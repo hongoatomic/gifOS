@@ -131,10 +131,6 @@ resultSugeridos3.onclick = function() {
     resultSugeridos3.value = resultadosSugeridos3[aleatorio];
 };
 
-tags.onclick = function() {
-    search();
-};
-
 //FUNCION CREAR TAGS
 let i = 0;
 

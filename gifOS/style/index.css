@@ -101,7 +101,7 @@ nav {
 }
 
 #search-input {
-    width: 88%;
+    width: 89%;
     margin: 0 0 5px 5px;
     border-inline-start: none;
     border-top-color: black;
@@ -109,6 +109,7 @@ nav {
 
 .submit-search {
     color: #b4b4b4;
+    margin-left: 10px;
 }
 
 .submit-search:active {
@@ -169,6 +170,7 @@ nav {
 .boton-tags {
     background-color: #4180f6;
     color: #fff;
+    margin-right: 5px;
 }
 
 .botones {
