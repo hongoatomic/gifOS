@@ -70,6 +70,9 @@ function stop() {
     recorder.stopRecording(stopRecordingCallback);
 }
 
+let id;
+let id2;
+
 function stopRecordingCallback() {
     video.src = video.srcObject = null;
     video.muted = false;
@@ -87,7 +90,7 @@ function stopRecordingCallback() {
     postToGiphy(form).then(response => {
         // This is the specific id of the gif updated to giphy (can verified the id here https://giphy.com/channel/solescobar10c6)
         console.log("Response de giphy " + response.data);
-        const id = response.data.id;
+        id = response.data.id;
 
         const endpoint = "https://api.giphy.com/v1/gifs/";
         // To find the url of this new gif hacemos como el fetch en 'index.js'
@@ -99,6 +102,7 @@ function stopRecordingCallback() {
                 console.log(json.data);
                 const url = json.data.images.fixed_height.url;
                 urlCopy = json.data.images.fixed_height.url;
+                id2 = json.data.images.id;
 
                 // registrar el nuevo gif en local storage con sur url
                 // localStorage.length will help for the loop to get them back after, first one saved will be myGifos-1, second one myGifos-2...
@@ -112,6 +116,8 @@ function stopRecordingCallback() {
 
 // Doc here https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
+let botonDescarga;
+
 async function postToGiphy(formData) {
     const pathToUpload = "https://upload.giphy.com/v1/gifs?";
     const parameterToUpload = {
@@ -120,7 +126,8 @@ async function postToGiphy(formData) {
         method: "POST",
         mode: "cors"
     };
-
+    botonDescarga = document.querySelector("#descargaGif");
+    botonDescarga.innerHTML = `<a href="https://media.giphy.com/media/${id}/giphy.gif" download="MiGif"> descargar gif</a>`;
     /** Upload with fetch :
      *   - First parameter will be the endpoint URL : https://upload.giphy.com/v1/gifs?api_key=QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p
      *   - Second parameter will be the gif (formData)
@@ -130,12 +137,12 @@ async function postToGiphy(formData) {
     return await response.json();
 }
 
-let comenzarVideo = document.getElementById("empezar");
-let videoTag = document.getElementsByTagName("video")[0];
-let cuadroComenzarVideo = document.getElementsByClassName(
-    "create-gif-description"
-)[0];
+// let comenzarVideo = document.getElementById("empezar");
+// let videoTag = document.getElementsByTagName("video")[0];
+// let cuadroComenzarVideo = document.getElementsByClassName(
+//     "create-gif-description"
+// )[0];
 
-comenzarVideo.onclick = function() {
-    cuadroComenzarVideo.innerHTML = "";
-};
+// comenzarVideo.onclick = function() {
+//     cuadroComenzarVideo.innerHTML = "";
+// };

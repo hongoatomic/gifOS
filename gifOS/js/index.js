@@ -131,17 +131,22 @@ resultSugeridos3.onclick = function() {
     resultSugeridos3.value = resultadosSugeridos3[aleatorio];
 };
 
-//FUNCION CREAR TAGS
 let i = 0;
 
 function crearTags() {
     let padre = resultsEl.parentNode;
-    tags.push("#" + searchInput.value + " ");
+    tags.push(searchInput.value + " ");
     let tag = document.createElement("button");
     console.log(padre);
     padre.insertBefore(tag, fakeInput01);
     tag.innerHTML = tags[i];
     tag.className = "boton-tags";
+    tagEtiqueta = document.querySelectorAll("button.boton-tags");
+    tagEtiqueta.forEach(function(valor, index) {
+        valor.onclick = function() {
+            search(valor.innerHTML);
+        };
+    });
     i++;
 }
 

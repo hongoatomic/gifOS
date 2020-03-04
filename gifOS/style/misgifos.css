@@ -107,6 +107,11 @@
     box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
 }
 
+.botonUpload {
+    background-color: #fff4fd;
+    width: 80%;
+}
+
 .descargar-gif {
     margin-top: 14px;
     margin-bottom: 75px;
