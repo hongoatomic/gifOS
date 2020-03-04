@@ -109,7 +109,25 @@
 
 .botonUpload {
     background-color: #fff4fd;
-    width: 80%;
+    margin: auto;
+    position: relative;
+    left: -16px;
+    top: 17px;
+    width: 95%;
+    height: 80%;
+    text-align: center;
+}
+
+.cancelar-subida {
+    width: 20%;
+    height: 37%;
+    position: relative;
+    left: 549px;
+    bottom: -66px;
+}
+
+.globe-img {
+    margin: auto;
 }
 
 .descargar-gif {

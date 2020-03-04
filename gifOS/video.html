@@ -80,24 +80,28 @@
                 </button>
             </figure>
         </div>
-        
     </div>
     <div class="video-frame style-frame">
-      
       <video controls autoplay playsinline class="video"> </video> 
-       
         <button id="record" class="botones"><img src="./assets/camera.svg" alt="camara icon" class="camara-icon"><span class="linea">|</span>Capturar</button>
         <button id="stop" class="botones"><img src="./assets/recording.svg" alt="timer icon" class="timer-icon"><span class="linea">|</span>Listo</button>
     </div>
 
-
-
+    <div class="captura-gif" id="captura-gif">
+      <div class="captura-gif-title" id="captura-gif-title"></div>
+      <div class="botonGif botonUpload">
+          <p class="title-save">Subiendo Guifo</p>
+          <img src="./assets/globe_img.png" alt="globe" class="globe-img">
+          <p>Estamos subiendo tu guifo…</p>
+          <button class="cancelar-subida botones">Cancelar</button>
+      </div>
+    </div> 
     <div class="captura-gif" id="captura-gif">
       <div class="captura-gif-title" id="captura-gif-title"></div>
       <video controls autoplay playsinline class="video"> </video> 
       <div class="botonGif">
           <p class="title-save">Guifo creado con éxito</p>
-          <button class="copiar-enlace botones-gif">
+          <button class="copiar-enlace botones-gif" id= "copiar-enlace">
               Copiar Enlace Guifo
           </button>
           <button id= "descargaGif" class="descargar-gif botones-gif">  
@@ -106,25 +110,7 @@
           <button class="listo botones">Listo</button>
       </div>
   </div>
-
-
-
-
-
-    <div class="captura-gif" id="captura-gif">
-      <div class="captura-gif-title" id="captura-gif-title"></div>
-      <div class="botonGif botonUpload">
-          <p class="title-save">Subiendo Guifo</p>
-          <img src="./assets/globe_img.png" alt="globe">
-          <p>Estamos subiendo tu guifo…</p>
-          <button class="listo botones">Cancelar</button>
-      </div>
-    </div>
-
-
-
-
-      
+         
       <script src="./js/video.js"></script>
       <script src="./js/themes2.js"></script>
     </body>
