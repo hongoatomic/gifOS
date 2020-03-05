@@ -103,7 +103,8 @@ function stopRecordingCallback() {
     blob = recorder.getBlob();
     form.append("file", blob, "myGif.gif");
     //console.log(form.get('file'));
-
+    VISTAPREVIA.STYLE.DISPLAY = "NONE";
+    PushSubscription.STYLE.DISPLAY = "BLOCK";
     postToGiphy(form).then(response => {
         // This is the specific id of the gif updated to giphy (can verified the id here https://giphy.com/channel/solescobar10c6)
         console.log("Response de giphy " + response.data);
