@@ -1,6 +1,7 @@
 * {
     font-family: "Chakra Petch", sans-serif;
     color: #060a24;
+    font-size: 18px;
 }
 
 .wrapper {
@@ -8,7 +9,6 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    font-size: 16px;
     background-color: #fff4fd;
 }
 
@@ -68,7 +68,7 @@ nav {
 }
 
 #search-form-o {
-    width: 80%;
+    width: 60%;
     margin: auto;
     background: #8f8f8f;
     border: 2px solid #b4b4b4;
@@ -120,15 +120,26 @@ nav {
 
 .submit-search:active {
     background-color: #f7c9f3;
-    color: black;
+    color: rgb(141, 141, 141);
 }
 
-.fa-search {
-    color: #b4b4b4;
+.lupa:active {
+    filter: brightness(50%);
 }
 
-.fa-search:active {
-    color: black;
+#themes {
+    height: 28px;
+}
+
+#themes:hover,
+#crear-guifos:hover {
+    outline: 0.3px dotted black;
+    outline-offset: -5px;
+}
+
+option {
+    background-color: #e6e6e6;
+    font-size: 17px;
 }
 
 .grid {
@@ -208,8 +219,12 @@ a {
     color: #524966;
 }
 
-.misgifs:hover {
+#misgifs:hover {
     border: 1px solid #110038;
+}
+
+#misgifs-o:hover {
+    border: 1px solid #ffffff;
 }
 
 .description-title {
@@ -320,6 +335,7 @@ ol {
 }
 
 .a-gif {
+    font-size: 15px;
     color: #ffffff;
 }
 

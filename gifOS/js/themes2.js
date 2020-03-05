@@ -5,7 +5,7 @@ let logo = document
     .getElementsByTagName("img")[1];
 let streamCamara = document.getElementById("create-gif-description");
 let counter = document.getElementById("counter");
-let misgifs = document.getElementsByClassName("misgifs")[0];
+let misgifs = document.getElementById("misgifs");
 
 temas.onchange = function() {
     cambiarTema(this.value);
@@ -17,6 +17,7 @@ function cambiarTemaOscuro() {
     counter.id = "counter-o";
     streamCamara.id = "create-gif-description-o";
     misgifs.style.color = "#FFFFFF";
+    misgifs.id = "misgifs-o";
 }
 
 function cambiarTemaClaro() {
@@ -25,6 +26,7 @@ function cambiarTemaClaro() {
     counter.id = "counter";
     streamCamara.id = "create-gif-description";
     misgifs.style.color = "#110038";
+    misgifs.id = "misgifs";
 }
 
 function cambiarTema(v) {

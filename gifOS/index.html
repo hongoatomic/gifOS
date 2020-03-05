@@ -32,15 +32,25 @@
                         class="logoIndex"
                     />
                 </div>
-                <button class="botones">
+                <button class="botones" id="crear-guifos">
                     <a href="video.html"> Crear Guifos</a>
                 </button>
                 <select id="themes" class="botones">
-                    <option value="elegir">Elegir tema</option>
-                    <option value="sailorD">Sailor Day</option>
-                    <option value="sailorN">Sailor Night</option>
+                    <option value="elegir" disabled selected hidden
+                        >Elegir tema</option
+                    >
+                    <option value="sailorD" class="value-select"
+                        >Sailor Day</option
+                    >
+                    <option value="sailorN" class="value-select"
+                        >Sailor Night</option
+                    >
                 </select>
-                <a href="misguifos.html"> <p class="misgifs">Mis Guifos</p></a>
+                <a href="misguifos.html">
+                    <p class="misgifs" id="misgifs">
+                        Mis Guifos
+                    </p></a
+                >
             </nav>
 
             <form id="search-form">
@@ -51,7 +61,11 @@
                     autocomplete="off"
                 />
                 <button type="submit" class="submit-search">
-                    <img src="./assets/lupa_inactive.svg" alt="lupa inactiva" />
+                    <img
+                        src="./assets/lupa_inactive.svg"
+                        alt="lupa inactiva"
+                        class="lupa"
+                    />
                     Buscar
                 </button>
                 <div id="resultadoSugerido"></div>

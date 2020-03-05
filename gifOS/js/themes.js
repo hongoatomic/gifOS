@@ -4,7 +4,7 @@ let logo = document
     .getElementsByTagName("img")[0];
 let form = document.getElementById("search-form");
 let counter = document.getElementById("counter");
-let misgifs = document.getElementsByClassName("misgifs")[0];
+let misgifs = document.getElementById("misgifs");
 
 temas.onchange = function() {
     cambiarTema(this.value);
@@ -16,7 +16,12 @@ function cambiarTemaOscuro() {
     form.id = "search-form-o";
     counter.id = "counter-o";
     misgifs.style.color = "#FFFFFF";
+    misgifs.id = "misgifs-o";
 }
+
+// function bigImg(x) {
+//     x.style.border = "solid #fffff";
+// }
 
 function cambiarTemaClaro() {
     document.body.style.backgroundColor = "#FFF4FD";
@@ -24,6 +29,7 @@ function cambiarTemaClaro() {
     form.id = "search-form";
     counter.id = "counter";
     misgifs.style.color = "#110038";
+    misgifs.id = "misgifs";
 }
 
 function cambiarTema(v) {
