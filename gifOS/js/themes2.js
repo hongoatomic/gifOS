@@ -1,8 +1,5 @@
 let temas = document.getElementById("themes");
-let logo = document
-    .getElementsByClassName("logo")[0]
-    .getElementsByClassName("go-home")[0]
-    .getElementsByTagName("img")[1];
+let logo = document.getElementById("logoIndex");
 let streamCamara = document.getElementById("create-gif-description");
 let counter = document.getElementById("counter");
 let misgifs = document.getElementById("misgifs");

@@ -11,6 +11,14 @@
     box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
 }
 
+.lado-derecho {
+    width: 50%;
+    position: relative;
+    left: 187px;
+    top: -38px;
+    margin: auto;
+}
+
 .style-frame {
     display: inline-block;
     margin: auto;
