@@ -13,8 +13,8 @@ comenzar.onclick = function() {
 detener.onclick = function() {
     stop();
     comenzar.style.display = "inline";
-    comenzar.innerHTML = "repetir captura";
-    comenzar.parentNode.innerHTML += `<button class="boton-repetir"> Subir Guifo </button>`;
+    comenzar.innerHTML = "Repetir Captura";
+    comenzar.parentNode.innerHTML += `<button class="boton-repetir" id="subir-guifo"> Subir Guifo </button>`;
 };
 
 stopBoton.style.display = "none";
@@ -87,6 +87,7 @@ botonEnlace.onclick = function() {
     document.body.appendChild(copiarLink);
     copiarLink.select();
     document.execCommand("copy");
+    alert("¡Copiado!");
     document.body.removeChild(copiarLink);
 };
 
@@ -103,8 +104,6 @@ function stopRecordingCallback() {
     blob = recorder.getBlob();
     form.append("file", blob, "myGif.gif");
     //console.log(form.get('file'));
-    VISTAPREVIA.STYLE.DISPLAY = "NONE";
-    PushSubscription.STYLE.DISPLAY = "BLOCK";
     postToGiphy(form).then(response => {
         // This is the specific id of the gif updated to giphy (can verified the id here https://giphy.com/channel/solescobar10c6)
         console.log("Response de giphy " + response.data);
@@ -150,13 +149,3 @@ async function postToGiphy(formData) {
 
     return await response.json();
 }
-
-// let comenzarVideo = document.getElementById("empezar");
-// let videoTag = document.getElementsByTagName("video")[0];
-// let cuadroComenzarVideo = document.getElementsByClassName(
-//     "create-gif-description"
-// )[0];
-
-// comenzarVideo.onclick = function() {
-//     cuadroComenzarVideo.innerHTML = "";
-// };

@@ -1,118 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="./assets/globe_img.png" type="image/png" />
-        <link rel="stylesheet" href="./style/index.css" />
-        <link rel="stylesheet" href="./style/misgifos.css" />
-        <link rel="stylesheet" href="index.html" />
-        <link
-            href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,600&display=swap"
-            rel="stylesheet"
-        />
-        <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
 
-        <title>gifOS</title>
-    </head>
-    <body class="wrapper">
-      <header id="counter"></header>
-        <nav>
-          <div class="logo">
-            <a href="index.html" class="go-home"></a>
-              <img
-              src="./assets/arrow.svg"
-              alt="arrow"
-              id="back-arrow"/>
-              <img
-              src="assets/gifOF_logo.png"
-              alt="logo"
-              id="logoIndex"/>
-          </div>
-          <div class="lado-derecho">
-          <button class="botones">
-            <a href="video.html"> Crear Guifos</a>
-          </button>
-          <select id="themes" class="botones" >
-            <option value="elegir" disabled selected hidden>Elegir tema</option>
-            <option value="sailorD">Sailor Day</option>
-            <option value="sailorN">Sailor Night</option>
-          </select>
-          <a href="misguifos.html"> <p class="misgifs" id="misgifs">Mis Guifos</p></a>
-        </div>
-      </nav>
-     
-        <div class="container-menu">
-          <div class="display-block display-none"></div>
-            <figure id="create-gif-description">
-            <figcaption class="description-title">
-              <img src="./assets/window_img.png" alt="window" />
-              <strong>Aquí podrás crear tus propios guifos</strong>
-            </figcaption>
-            <div class="description-content">
-              <p>
-                Crear tu <strong class="italic">guifo</strong> es muy fácil,
-                graba cualquier imagen con tu cámara y obtén guifos
-                personalizados. Los pasos para crear tu guifo son:
-              </p>
-              <ol>
-                <li>
-                  <strong>1)</strong> Dar permisos de acceso a la cámara (sólo
-                  por el tiempo de uso)
-                </li>
-                <li><strong>2)</strong> Capturar tu momento guifo</li>
-                <li><strong>3)</strong> Revisar el momento</li>
-                <li><strong>4)</strong> Listo para subir y compartir!</li>
-              </ol>
-              <p>
-                ¿Quieres comenzar a crear tu
-                <strong class="italic">guifo</strong> ahora?
-              </p>
-              <figure class="create-gif-btn-container">
-                <button
-                  class="botones"
-                > <a href="index.html">
-                  Cancelar</a>
-                </button>
-                <button id="empezar"
-                class="botones"
-                >
-                  Comenzar
-                </button>
-            </figure>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./assets/globe_img.png" type="image/png" />
+  <link rel="stylesheet" href="./style/index.css" />
+  <link rel="stylesheet" href="./style/misgifos.css" />
+  <link rel="stylesheet" href="index.html" />
+  <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,600&display=swap" rel="stylesheet" />
+  <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+
+  <title>gifOS</title>
+</head>
+
+<body class="wrapper">
+  <header id="counter"></header>
+  <nav>
+    <div class="logo">
+      <a href="index.html" class="go-home">
+        <img src="./assets/arrow.svg" alt="arrow" id="back-arrow" />
+        <img src="assets/gifOF_logo.png" alt="logo" id="logoIndex" />
+      </a>
+    </div>
+    <div class="lado-derecho">
+      <button class="botones" id="crear-guifos">
+        <a href="video.html"> Crear Guifos</a>
+      </button>
+      <select id="themes" class="botones">
+        <option value="elegir" disabled selected hidden id="hidden">Elegir tema</option>
+        <option value="sailorD">Sailor Day</option>
+        <option value="sailorN">Sailor Night</option>
+      </select>
+      <a href="misguifos.html">
+        <p class="misgifs" id="misgifs">Mis Guifos</p>
+      </a>
+    </div>
+  </nav>
+  <div class="displayb displayn">
+    <div class="container-menu">
+      <figure id="create-gif-description">
+        <figcaption class="description-title">
+          <img src="./assets/window_img.png" alt="window" />
+          <strong>Aquí podrás crear tus propios guifos</strong>
+        </figcaption>
+        <div class="description-content">
+          <p>
+            Crear tu <strong class="italic">guifo</strong> es muy fácil,
+            graba cualquier imagen con tu cámara y obtén guifos
+            personalizados. Los pasos para crear tu guifo son:
+          </p>
+          <ol>
+            <li>
+              <strong>1)</strong> Dar permisos de acceso a la cámara (sólo
+              por el tiempo de uso)
+            </li>
+            <li><strong>2)</strong> Capturar tu momento guifo</li>
+            <li><strong>3)</strong> Revisar el momento</li>
+            <li><strong>4)</strong> Listo para subir y compartir!</li>
+          </ol>
+          <p>
+            ¿Quieres comenzar a crear tu
+            <strong class="italic">guifo</strong> ahora?
+          </p>
+          <figure class="create-gif-btn-container">
+            <button class="botones"> <a href="index.html">
+                Cancelar</a>
+            </button>
+            <button id="empezar" class="botones">
+              Comenzar
+            </button>
+          </figure>
         </div>
     </div>
-    <div class="video-frame style-frame">
-      <video controls autoplay playsinline class="video"> </video> 
-        <button id="record" class="botones"><img src="./assets/camera.svg" alt="camara icon" class="camara-icon"><span class="linea">|</span>Capturar</button>
-        <button id="stop" class="botones"><img src="./assets/recording.svg" alt="timer icon" class="timer-icon"><span class="linea">|</span>Listo</button>
+    <div class="video-frame style-frame" id="video-frame">
+      <video controls autoplay playsinline class="video"> </video>
+      <button id="record" class="botones"><img src="./assets/camera.svg" alt="camara icon" class="camara-icon"><span
+          class="linea">|</span>Capturar</button>
+      <button id="stop" class="botones"><img src="./assets/recording.svg" alt="timer icon" class="timer-icon"><span
+          class="linea">|</span>Listo</button>
     </div>
-
     <div class="captura-gif" id="captura-gif">
       <div class="captura-gif-title" id="captura-gif-title"></div>
       <div class="botonGif botonUpload">
-          <p class="title-save">Subiendo Guifo</p>
-          <img src="./assets/globe_img.png" alt="globe" class="globe-img">
-          <p>Estamos subiendo tu guifo…</p>
-          <button class="cancelar-subida botones">Cancelar</button>
+        <p class="title-save">Subiendo Guifo</p>
+        <img src="./assets/globe_img.png" alt="globe" class="globe-img">
+        <p>Estamos subiendo tu guifo…</p>
+        <button class="cancelar-subida botones">Cancelar</button>
       </div>
-    </div> 
-    <div class="captura-gif" id="captura-gif">
-      <div class="captura-gif-title" id="captura-gif-title"></div>
-      <video controls autoplay playsinline class="video"> </video> 
+    </div>
+    <div class="captura-exito" id="captura-exito">
+      <div class="captura-exito-title" id="captura-exito-title"></div>
+      <video controls autoplay playsinline class="video" id="video-capturado"> </video>
       <div class="botonGif">
-          <p class="title-save">Guifo creado con éxito</p>
-          <button class="copiar-enlace botones-gif" id= "copiar-enlace">
-              Copiar Enlace Guifo
-          </button>
-          <button id= "descargaGif" class="descargar-gif botones-gif">  
-              Descargar Guifo
-          </button>
-          <button class="listo botones">Listo</button>
+        <p class="title-save">Guifo creado con éxito</p>
+        <button class="copiar-enlace botones-gif" id="copiar-enlace">
+          Copiar Enlace Guifo
+        </button>
+        <button id="descargaGif" class="descargar-gif botones-gif">
+          Descargar Guifo
+        </button>
+        <button class="listo botones">Listo</button>
       </div>
+    </div>
   </div>
-         
-      <script src="./js/video.js"></script>
-      <script src="./js/themes2.js"></script>
-    </body>
+  <script src="./js/video.js"></script>
+  <script src="./js/themes2.js"></script>
+</body>
 </html>

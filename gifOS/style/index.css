@@ -51,7 +51,7 @@
 
 nav {
     text-align: right;
-    width: 60%;
+    width: 90%;
     margin: auto;
 }
 
@@ -60,7 +60,7 @@ nav {
     margin-left: 16px;
 }
 #search-form {
-    width: 60%;
+    width: 90%;
     margin: auto;
     background: #e6e6e6;
     border: 2px solid #b4b4b4;
@@ -68,7 +68,7 @@ nav {
 }
 
 #search-form-o {
-    width: 60%;
+    width: 90%;
     margin: auto;
     background: #8f8f8f;
     border: 2px solid #b4b4b4;
@@ -102,7 +102,7 @@ nav {
 }
 
 #search-input {
-    width: 89%;
+    width: 87%;
     margin: 0 0 5px 5px;
     border-inline-start: none;
     border-top-color: black;
@@ -111,6 +111,19 @@ nav {
 #trending {
     position: relative;
     left: 52px;
+}
+
+.submit-search-o:hover {
+    background-color: #ee3efe;
+}
+
+.submit-search-o:active {
+    background-color: #ee3efe;
+    filter: brightness(50%);
+}
+
+.submit-search-o {
+    background-color: rgb(141, 141, 141);
 }
 
 .submit-search {
@@ -163,7 +176,7 @@ option {
 
 .fakeInput,
 .inputFake {
-    width: 60%;
+    width: 90%;
     margin: auto;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -179,7 +192,7 @@ option {
 
 .form-tags {
     display: block;
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-top: 2%;
 }
@@ -198,7 +211,13 @@ option {
 
 .botones:hover,
 .botones:active {
-    background: #e6bbe2;
+    filter: brightness(90%);
+}
+
+#botones-o {
+    background: #ee3efe;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
 }
 
 a {
@@ -249,16 +268,22 @@ ol {
 
 .container-menu {
     width: 684px;
-    margin-top: 7px;
-    margin-left: 80px;
+    margin: auto;
     background: #e6e6e6;
+    box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+}
+
+.container-menu-o {
+    width: 684px;
+    margin: auto;
+    background: #b4b4b4;
     box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
 }
 
 #create-gif-description::before {
     content: "Crear Guifos";
     display: block;
-    width: 675px;
+    width: 676px;
     margin-left: -38px;
     color: white;
     padding-left: 5px;
@@ -290,7 +315,7 @@ ol {
     background: #f0f0f0;
     border: 1px solid #808080;
     box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
-    width: 89%;
+    width: 87%;
     margin: 5px 0px 0px 2px;
     padding-bottom: 2px;
     text-indent: 5px;
@@ -320,6 +345,23 @@ ol {
         90deg,
         rgba(65, 128, 240, 1) 12%,
         rgba(247, 201, 243, 1) 89%
+    );
+}
+
+#titlegif-o {
+    display: flex;
+    position: relative;
+    left: 7px;
+    margin: -7px;
+    align-items: center;
+    justify-content: space-between;
+    width: 208px;
+    font-size: 14px;
+    color: #ffffff;
+    background: linear-gradient(
+        90deg,
+        rgba(46, 50, 251, 1) 12%,
+        rgba(238, 62, 254, 1) 89%
     );
 }
 
