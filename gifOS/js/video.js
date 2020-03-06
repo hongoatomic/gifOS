@@ -1,20 +1,27 @@
 let comenzar = document.getElementById("record");
 let detener = document.getElementById("stop");
-let video = document.querySelector("video");
+let video = document.getElementById("antonio");
+let videoCapturado = document.getElementById("video-capturado");
 let recorder;
 apiKey = "api_key=QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
 let stopBoton = document.querySelector("button#stop");
+let btnEmpezar = document.getElementById("empezar");
+let form = new FormData();
+let blobStop;
 
-comenzar.onclick = function() {
+comenzar.onclick = recording;
+
+function recording() {
     record();
     stopBoton.style.display = "inline";
     comenzar.style.display = "none";
-};
+}
 detener.onclick = function() {
     stop();
-    comenzar.style.display = "inline";
-    comenzar.innerHTML = "Repetir Captura";
-    comenzar.parentNode.innerHTML += `<button class="boton-repetir" id="subir-guifo"> Subir Guifo </button>`;
+    detener.style.display = "none";
+    comenzar.style.display = "none";
+    document.getElementById("subir-guifo").style.display = "block";
+    document.getElementById("repetir-guifo").style.display = "block";
 };
 
 stopBoton.style.display = "none";
@@ -26,6 +33,7 @@ function record() {
         // set video tag data
         video.muted = true;
         video.volume = 0;
+        video.srcObject = stream;
         video.srcObject = stream;
 
         recorder = RecordRTC(stream, {
@@ -92,18 +100,20 @@ botonEnlace.onclick = function() {
 };
 
 function stopRecordingCallback() {
-    video.src = video.srcObject = null;
-    video.muted = false;
-    video.volume = 1;
-    video.src = URL.createObjectURL(recorder.getBlob());
-
+    blobStop = URL.createObjectURL(recorder.getBlob());
     recorder.stream.stop();
 
     // Create the FormData to send to giphy
-    let form = new FormData();
+    form = new FormData();
     blob = recorder.getBlob();
     form.append("file", blob, "myGif.gif");
     //console.log(form.get('file'));
+}
+
+document.querySelector("#subir-guifo").onclick = function() {
+    document.getElementById("video-frame").style.display = "none";
+    document.getElementById("captura-gif").style.display = "block";
+
     postToGiphy(form).then(response => {
         // This is the specific id of the gif updated to giphy (can verified the id here https://giphy.com/channel/solescobar10c6)
         console.log("Response de giphy " + response.data);
@@ -123,12 +133,19 @@ function stopRecordingCallback() {
                 // registrar el nuevo gif en local storage con sur url
                 // localStorage.length will help for the loop to get them back after, first one saved will be myGifos-1, second one myGifos-2...
                 localStorage.setItem("myGifos-" + localStorage.length, url);
+                document.getElementById("captura-gif").style.display = "none";
+                document.getElementById("captura-exito").style.display =
+                    "block";
+                videoCapturado.src = video.srcObject = null;
+                videoCapturado.muted = false;
+                videoCapturado.volume = 1;
+                videoCapturado.src = blobStop;
             });
     });
 
     recorder.destroy();
     recorder = null;
-}
+};
 
 // Doc here https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
@@ -149,3 +166,10 @@ async function postToGiphy(formData) {
 
     return await response.json();
 }
+
+btnEmpezar.onclick = function() {
+    document.getElementsByClassName("container-menu")[0].style.display = "none";
+    document.getElementsByClassName("video-frame")[0].style.display = "block";
+};
+
+document.getElementById("repetir-guifo").onclick = recording;

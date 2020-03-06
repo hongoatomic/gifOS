@@ -9,7 +9,7 @@ let myNodelist = document.getElementsByTagName("button");
 let hidden = document.querySelector("select#themes");
 let anchor = document.getElementsByTagName("a");
 let lupa = document.querySelector("img.lupa");
-// let searchSubmit = document.getElementsByClassName("submit-search")[0];
+let searchSubmit = document.getElementsByClassName("submit-search")[0];
 // let titleGif = document.querySelector("#random-gif").querySelector("#titlegif");
 temas.onchange = function() {
     cambiarTema(this.value);
@@ -25,6 +25,7 @@ function cambiarTemaOscuro() {
     hidden.style.color = "#ffffff";
     hidden.style.backgroundColor = "#EE3EFE";
     lupa.src = "./assets/lupa_light.svg";
+    searchSubmit.className = "submit-search-o";
 
     // titleGif.id = "titlegif-o";
     let a;
@@ -38,7 +39,6 @@ function cambiarTemaOscuro() {
         myNodelist[i].style.backgroundColor = "#EE3EFE";
         myNodelist[i].style.color = "white";
     }
-    // searchSubmit.className = "submit-search-o";
 }
 
 // function bigImg(x) {
@@ -55,6 +55,7 @@ function cambiarTemaClaro() {
     hidden.style.color = "#110038";
     hidden.style.backgroundColor = "#F7C9F3";
     lupa.src = "./assets/lupa_inactive.svg";
+    searchSubmit.className = "submit-search";
     // titleGif.id = "titlegif";
     let a;
     anchor;
@@ -67,7 +68,6 @@ function cambiarTemaClaro() {
         myNodelist[i].style.backgroundColor = "#4180F6";
         myNodelist[i].style.color = "black";
     }
-    // searchSubmit.className = "submit-search";
 }
 
 function cambiarTema(v) {

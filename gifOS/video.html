@@ -74,11 +74,13 @@
         </div>
     </div>
     <div class="video-frame style-frame" id="video-frame">
-      <video controls autoplay playsinline class="video"> </video>
+      <video controls autoplay playsinline class="video" id="antonio"> </video>
       <button id="record" class="botones"><img src="./assets/camera.svg" alt="camara icon" class="camara-icon"><span
           class="linea">|</span>Capturar</button>
       <button id="stop" class="botones"><img src="./assets/recording.svg" alt="timer icon" class="timer-icon"><span
           class="linea">|</span>Listo</button>
+          <button class="boton-repetir" id="subir-guifo"> Subir Guifo </button>
+          <button class="boton-repetir" id="repetir-guifo"> Repetir Guifo </button>
     </div>
     <div class="captura-gif" id="captura-gif">
       <div class="captura-gif-title" id="captura-gif-title"></div>
@@ -91,7 +93,7 @@
     </div>
     <div class="captura-exito" id="captura-exito">
       <div class="captura-exito-title" id="captura-exito-title"></div>
-      <video controls autoplay playsinline class="video" id="video-capturado"> </video>
+      <video controls  class="video" id="video-capturado"> </video>
       <div class="botonGif">
         <p class="title-save">Guifo creado con éxito</p>
         <button class="copiar-enlace botones-gif" id="copiar-enlace">

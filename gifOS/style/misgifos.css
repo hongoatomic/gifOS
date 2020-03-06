@@ -5,6 +5,7 @@ video {
 }
 
 .style-frame {
+    display: none;
     width: 860px;
     height: 548px;
     margin: 0 auto;
@@ -14,6 +15,7 @@ video {
 }
 
 .style-frame-o {
+    display: none;
     width: 860px;
     height: 548px;
     margin: 0 auto;
@@ -83,6 +85,7 @@ video {
 }
 
 #captura-gif {
+    display: none;
     width: 721px;
     height: 400px;
     margin: auto;
@@ -93,6 +96,7 @@ video {
 }
 
 #captura-gif-o {
+    display: none;
     width: 721px;
     height: 391px;
     margin: auto;
@@ -133,6 +137,7 @@ video {
 }
 
 #captura-exito {
+    display: none;
     width: 721px;
     height: 391px;
     margin: auto;
@@ -142,6 +147,7 @@ video {
 }
 
 #captura-exito-o {
+    display: none;
     width: 721px;
     height: 391px;
     margin: auto;
@@ -249,12 +255,12 @@ video {
 }
 
 #subir-guifo {
+    display: none;
     background: #f7c9f3;
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
     position: relative;
-    top: -53px;
-    left: 588px;
+    left: 165px;
     padding: 5px;
 }
 
@@ -263,10 +269,6 @@ video {
     filter: brightness(90%);
 }
 
-.displayn {
+#repetir-guifo {
     display: none;
-}
-
-.displayb {
-    display: block;
 }
