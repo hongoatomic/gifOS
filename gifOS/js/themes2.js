@@ -97,9 +97,3 @@ localStorage.setItem("on_load_counter", n);
 document.getElementById("counter").innerHTML =
     "¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: " +
     n;
-
-crearGifs.addEventListener("click", function(e) {
-    e.preventDefault();
-
-    videoFrame.innerHTML = "";
-});

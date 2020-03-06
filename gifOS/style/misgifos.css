@@ -190,6 +190,11 @@ video {
 #video-capturado {
     width: 365px;
     height: 191px;
+    margin-top: 38px;
+    margin-left: 18px;
+    background: #ffffff;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
 }
 
 .botonGif {
