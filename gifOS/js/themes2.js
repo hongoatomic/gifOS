@@ -36,17 +36,17 @@ function cambiarTemaOscuro() {
     hidden.style.color = "#ffffff";
     hidden.style.backgroundColor = "#EE3EFE";
     camera.src = "./assets/camera_light.svg";
-    let a;
-    anchor;
-    for (a = 0; a < anchor.length; a++) {
-        anchor[a].style.color = "white";
-    }
-    let i;
-    myNodelist;
-    for (i = 0; i < myNodelist.length; i++) {
-        myNodelist[i].style.backgroundColor = "#EE3EFE";
-        myNodelist[i].style.color = "white";
-    }
+    // let a;
+    // anchor;
+    // for (a = 0; a < anchor.length; a++) {
+    //     anchor[a].style.color = "white";
+    // }
+    // let i;
+    // myNodelist;
+    // for (i = 0; i < myNodelist.length; i++) {
+    //     myNodelist[i].style.backgroundColor = "#EE3EFE";
+    //     myNodelist[i].style.color = "white";
+    // }
 }
 
 function cambiarTemaClaro() {
@@ -66,17 +66,17 @@ function cambiarTemaClaro() {
     hidden.style.color = "#110038";
     hidden.style.backgroundColor = "#F7C9F3";
     camera.src = "./assets/camera.svg";
-    let a;
-    anchor;
-    for (a = 0; a < anchor.length; a++) {
-        anchor[a].style.color = "#110038";
-    }
-    let i;
-    myNodelist;
-    for (i = 0; i < myNodelist.length; i++) {
-        myNodelist[i].style.backgroundColor = "#f7c9f3";
-        myNodelist[i].style.color = "black";
-    }
+    // let a;
+    // anchor;
+    // for (a = 0; a < anchor.length; a++) {
+    //     anchor[a].style.color = "#110038";
+    // }
+    // let i;
+    // myNodelist;
+    // for (i = 0; i < myNodelist.length; i++) {
+    //     myNodelist[i].style.backgroundColor = "#f7c9f3";
+    //     myNodelist[i].style.color = "black";
+    // }
 }
 
 function cambiarTema(v) {

@@ -10,7 +10,7 @@ let hidden = document.querySelector("select#themes");
 let anchor = document.getElementsByTagName("a");
 let lupa = document.querySelector("img.lupa");
 let searchSubmit = document.getElementsByClassName("submit-search")[0];
-// let titleGif = document.querySelector("#random-gif").querySelector("#titlegif");
+// let titleGif = document.getElementById("div-sugeridos");
 temas.onchange = function() {
     cambiarTema(this.value);
 };
@@ -28,22 +28,18 @@ function cambiarTemaOscuro() {
     searchSubmit.className = "submit-search-o";
 
     // titleGif.id = "titlegif-o";
-    let a;
-    anchor;
-    for (a = 0; a < anchor.length; a++) {
-        anchor[a].style.color = "white";
-    }
-    let i;
-    myNodelist;
-    for (i = 0; i < myNodelist.length; i++) {
-        myNodelist[i].style.backgroundColor = "#EE3EFE";
-        myNodelist[i].style.color = "white";
-    }
+    // let a;
+    // anchor;
+    // for (a = 0; a < anchor.length; a++) {
+    //     anchor[a].style.color = "white";
+    // }
+    // let i;
+    // myNodelist;
+    // for (i = 0; i < myNodelist.length; i++) {
+    //     myNodelist[i].style.backgroundColor = "#EE3EFE";
+    //     myNodelist[i].style.color = "white";
+    // }
 }
-
-// function bigImg(x) {
-//     x.style.border = "solid #fffff";
-// }
 
 function cambiarTemaClaro() {
     document.body.style.backgroundColor = "#FFF4FD";
@@ -57,17 +53,17 @@ function cambiarTemaClaro() {
     lupa.src = "./assets/lupa_inactive.svg";
     searchSubmit.className = "submit-search";
     // titleGif.id = "titlegif";
-    let a;
-    anchor;
-    for (a = 0; a < anchor.length; a++) {
-        anchor[a].style.color = "#110038";
-    }
-    let i;
-    myNodelist;
-    for (i = 0; i < myNodelist.length; i++) {
-        myNodelist[i].style.backgroundColor = "#4180F6";
-        myNodelist[i].style.color = "black";
-    }
+    // let a;
+    // anchor;
+    // for (a = 0; a < anchor.length; a++) {
+    //     anchor[a].style.color = "#110038";
+    // }
+    // let i;
+    // myNodelist;
+    // for (i = 0; i < myNodelist.length; i++) {
+    //     myNodelist[i].style.backgroundColor = "#4180F6";
+    //     myNodelist[i].style.color = "black";
+    // }
 }
 
 function cambiarTema(v) {

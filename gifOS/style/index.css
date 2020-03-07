@@ -123,6 +123,7 @@ nav {
 }
 
 .submit-search-o {
+    margin-left: 10px;
     background-color: rgb(141, 141, 141);
 }
 
@@ -132,6 +133,11 @@ nav {
 }
 
 .submit-search:active {
+    background-color: #f780eb;
+    color: rgb(141, 141, 141);
+}
+
+.submit-search:hover {
     background-color: #f7c9f3;
     color: rgb(141, 141, 141);
 }

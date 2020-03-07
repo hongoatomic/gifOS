@@ -202,7 +202,6 @@ const random = fetch(
             alt="boton cierre ventana"
             class="boton-cierre"
         /></p>
-        
             <img
                 class="item"
             src="${url}"
