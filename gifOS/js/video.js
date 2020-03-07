@@ -6,6 +6,8 @@ let recorder;
 apiKey = "api_key=QdQJ4v523JXYS55K6OWuPzbw5U0Cqw1p";
 let stopBoton = document.querySelector("button#stop");
 let btnEmpezar = document.getElementById("empezar");
+let containerComenzar = document.getElementsByClassName("container-menu")[0];
+let videoEncuadro = document.getElementsByClassName("video-frame")[0];
 let form = new FormData();
 let blobStop;
 
@@ -168,8 +170,8 @@ async function postToGiphy(formData) {
 }
 
 btnEmpezar.onclick = function() {
-    document.getElementsByClassName("container-menu")[0].style.display = "none";
-    document.getElementsByClassName("video-frame")[0].style.display = "block";
+    containerComenzar.style.display = "none";
+    videoEncuadro.style.display = "block";
 };
 
 document.getElementById("repetir-guifo").onclick = recording;

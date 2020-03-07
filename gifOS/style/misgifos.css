@@ -265,7 +265,7 @@ video {
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
     position: relative;
-    left: 165px;
+    left: 750px;
     padding: 5px;
 }
 
@@ -276,4 +276,22 @@ video {
 
 #repetir-guifo {
     display: none;
+    position: relative;
+    left: 620px;
+    bottom: 36px;
+    background: #fff4fd;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+    padding: 5px;
+}
+
+#repetir-guifo:hover {
+    display: none;
+    position: relative;
+    left: 620px;
+    bottom: 36px;
+    background: #c4bcc2;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+    padding: 5px;
 }
