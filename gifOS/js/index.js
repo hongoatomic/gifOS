@@ -197,17 +197,17 @@ const random = fetch(
             const height = obj.images.fixed_height.height;
             const title = obj.title;
 
-            resultsHTML += ` <div id="div-sugeridos"> <p id="titlegif"> ${title} <img
+            resultsHTML += ` <div > <span id="titlegif"> ${title} <img
             src="assets/button3.svg"
             alt="boton cierre ventana"
             class="boton-cierre"
-        /></p>
+        /></span>
             <img
                 class="item"
             src="${url}"
             height="${height}"
             alt="${title}"
-            ><div id="img-boton">  <button id="boton-gif"> <a href="${url}"  target="_blank" class="a-gif">Ver más... </a></button></div> </div>`;
+            ><div id="img-boton">  <button class="boton-gif"> <a href="${url}"  target="_blank" class="a-gif">Ver más... </a></button></div> </div>`;
         });
         randomGif.innerHTML = resultsHTML;
     });

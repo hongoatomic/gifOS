@@ -8,8 +8,11 @@ let misgifs = document.getElementById("misgifs");
 let hidden = document.querySelector("select#themes");
 let lupa = document.querySelector("img.lupa");
 // let myNodelist = document.getElementsByClassName("a");
+let tituloGif = document.getElementsByTagName("span");
+let verMas = document.getElementsByClassName("boton-gif");
 let searchSubmit = document.getElementsByClassName("submit-search")[0];
 let crearGuifos = document.getElementById("crear-guifos");
+
 temas.onchange = function() {
     cambiarTema(this.value);
 };
@@ -26,11 +29,12 @@ function cambiarTemaOscuro() {
     lupa.src = "./assets/lupa_light.svg";
     searchSubmit.className = "submit-search-o";
     crearGuifos.id = "crear-gifos-o";
-    // let i;
-    // myNodelist;
-    // for (i = 0; i < myNodelist.length; i++) {
-    //     myNodelist[i].style.color = "white";
-    // }
+    for (i = 0; i < tituloGif.length; i++) {
+        tituloGif[i].id = "titlegif-o";
+    }
+    for (var a = 0; a < verMas.length; a++) {
+        verMas[a].id = "boton-gif-o";
+    }
 }
 
 function cambiarTemaClaro() {
@@ -45,11 +49,12 @@ function cambiarTemaClaro() {
     lupa.src = "./assets/lupa_inactive.svg";
     searchSubmit.className = "submit-search";
     crearGuifos.id = "crear-gifos";
-    // let i;
-    // myNodelist;
-    // for (i = 0; i < myNodelist.length; i++) {
-    //     myNodelist[i].style.color = "black";
-    // }
+    for (i = 0; i < tituloGif.length; i++) {
+        tituloGif[i].id = "titlegif";
+    }
+    for (var a = 0; a < verMas.length; a++) {
+        verMas[a].id = "boton-gif";
+    }
 }
 
 function cambiarTema(v) {
