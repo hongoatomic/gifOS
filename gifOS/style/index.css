@@ -147,13 +147,51 @@ nav {
 }
 
 #themes {
+    background: #f7c9f3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
     height: 28px;
 }
 
 #themes:hover,
-#crear-guifos:hover {
+#crear-gifos:hover,
+#crear-gifos-o:hover {
     outline: 0.3px dotted black;
     outline-offset: -5px;
+    filter: brightness(90%);
+}
+
+#crear-gifos-o > a {
+    color: white;
+}
+
+#crear-gifos {
+    background: #f7c9f3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+}
+
+#crear-gifos-o {
+    background: #ee3efe;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+}
+
+.botones {
+    background: #f7c9f3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+}
+
+.botones:hover,
+.botones:active {
+    filter: brightness(90%);
+}
+
+#botones-o {
+    background: #ee3efe;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
 }
 
 option {
@@ -207,23 +245,6 @@ option {
     background-color: #4180f6;
     color: #fff;
     margin-right: 5px;
-}
-
-.botones {
-    background: #f7c9f3;
-    border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
-}
-
-.botones:hover,
-.botones:active {
-    filter: brightness(90%);
-}
-
-#botones-o {
-    background: #ee3efe;
-    border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
 }
 
 a {

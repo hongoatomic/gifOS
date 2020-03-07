@@ -13,7 +13,7 @@ let myNodelist = document.getElementsByTagName("button");
 let hidden = document.querySelector("select#themes");
 let anchor = document.getElementsByTagName("a");
 let camera = document.querySelector("img.camara-icon");
-let crearGifs = document.getElementById("crear-guifos");
+let crearGuifos = document.getElementById("crear-guifos");
 let videoFrame = document.getElementById("video-frame");
 temas.onchange = function() {
     cambiarTema(this.value);
@@ -36,6 +36,8 @@ function cambiarTemaOscuro() {
     hidden.style.color = "#ffffff";
     hidden.style.backgroundColor = "#EE3EFE";
     camera.src = "./assets/camera_light.svg";
+    crearGuifos.id = "crear-gifos-o";
+
     // let a;
     // anchor;
     // for (a = 0; a < anchor.length; a++) {
@@ -66,6 +68,8 @@ function cambiarTemaClaro() {
     hidden.style.color = "#110038";
     hidden.style.backgroundColor = "#F7C9F3";
     camera.src = "./assets/camera.svg";
+    crearGuifos.id = "crear-gifos";
+
     // let a;
     // anchor;
     // for (a = 0; a < anchor.length; a++) {
