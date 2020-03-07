@@ -123,6 +123,7 @@ nav {
 }
 
 .submit-search-o {
+    color: white;
     margin-left: 10px;
     background-color: rgb(141, 141, 141);
 }
@@ -154,8 +155,13 @@ nav {
 }
 
 #themes:hover,
-#crear-gifos:hover,
 #crear-gifos-o:hover {
+    outline: 0.3px dotted black;
+    outline-offset: -5px;
+    filter: brightness(90%);
+}
+
+#crear-gifos:hover {
     outline: 0.3px dotted black;
     outline-offset: -5px;
     filter: brightness(90%);

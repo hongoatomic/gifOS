@@ -16,8 +16,6 @@ function cambiarTemaOscuro() {
     document.body.style.backgroundColor = "#110038";
     logo.src = "./assets/gifOF_logo_dark.png";
     counter.id = "counter-o";
-    // gifBox.id = "captura-gif-title-o";
-    misgifs.style.color = "#FFFFFF";
     crearGuifos.id = "crear-gifos-o";
     hidden.style.color = "#ffffff";
     hidden.style.backgroundColor = "#EE3EFE";
@@ -27,8 +25,6 @@ function cambiarTemaClaro() {
     document.body.style.backgroundColor = "#FFF4FD";
     logo.src = "./assets/gifOF_logo.png";
     counter.id = "counter";
-    // gifBox.id = "captura-gif-title";
-    misgifs.style.color = "#110038";
     crearGuifos.id = "crear-gifos";
     hidden.style.color = "#110038";
     hidden.style.backgroundColor = "#F7C9F3";

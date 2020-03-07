@@ -113,7 +113,7 @@ function stopRecordingCallback() {
 }
 
 document.querySelector("#subir-guifo").onclick = function() {
-    document.getElementById("video-frame").style.display = "none";
+    videoEncuadro.style.display = "none";
     document.getElementById("captura-gif").style.display = "block";
 
     postToGiphy(form).then(response => {
