@@ -15,6 +15,8 @@ let anchor = document.getElementsByTagName("a");
 let camera = document.querySelector("img.camara-icon");
 let crearGuifos = document.getElementById("crear-guifos");
 let videoFrame = document.getElementById("video-frame");
+let recordBtn = document.getElementById("record");
+let repetirGif = document.getElementById("repetir-guifo");
 temas.onchange = function() {
     cambiarTema(this.value);
 };
@@ -37,18 +39,8 @@ function cambiarTemaOscuro() {
     hidden.style.backgroundColor = "#EE3EFE";
     camera.src = "./assets/camera_light.svg";
     crearGuifos.id = "crear-gifos-o";
-
-    // let a;
-    // anchor;
-    // for (a = 0; a < anchor.length; a++) {
-    //     anchor[a].style.color = "white";
-    // }
-    // let i;
-    // myNodelist;
-    // for (i = 0; i < myNodelist.length; i++) {
-    //     myNodelist[i].style.backgroundColor = "#EE3EFE";
-    //     myNodelist[i].style.color = "white";
-    // }
+    recordBtn.id = "record-o";
+    repetirGif.id = "repetir-guifo-o";
 }
 
 function cambiarTemaClaro() {
@@ -69,18 +61,8 @@ function cambiarTemaClaro() {
     hidden.style.backgroundColor = "#F7C9F3";
     camera.src = "./assets/camera.svg";
     crearGuifos.id = "crear-gifos";
-
-    // let a;
-    // anchor;
-    // for (a = 0; a < anchor.length; a++) {
-    //     anchor[a].style.color = "#110038";
-    // }
-    // let i;
-    // myNodelist;
-    // for (i = 0; i < myNodelist.length; i++) {
-    //     myNodelist[i].style.backgroundColor = "#f7c9f3";
-    //     myNodelist[i].style.color = "black";
-    // }
+    recordBtn.id = "record";
+    repetirGif.id = "repetir-guifo";
 }
 
 function cambiarTema(v) {

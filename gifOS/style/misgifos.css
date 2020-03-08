@@ -41,6 +41,16 @@ video {
     left: 432px;
 }
 
+#record-o {
+    margin: 5px 12px 16px 275px;
+    padding: 5px;
+    background-color: #ee3efe;
+    color: white;
+    display: flex;
+    position: relative;
+    left: 432px;
+}
+
 #stop {
     color: #ffffff;
     background-color: #ff6161;
@@ -277,7 +287,7 @@ video {
 #repetir-guifo {
     display: none;
     position: relative;
-    left: 620px;
+    left: 595px;
     bottom: 36px;
     background: #fff4fd;
     border: 1px solid #110038;
@@ -288,10 +298,38 @@ video {
 #repetir-guifo:hover {
     display: none;
     position: relative;
-    left: 620px;
+    left: 595px;
     bottom: 36px;
     background: #c4bcc2;
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
     padding: 5px;
+}
+
+#repetir-guifo-o {
+    display: none;
+    position: relative;
+    left: 595px;
+    bottom: 36px;
+    background: #110038;
+    color: #b4b4b4;
+    border: 1px solid #b4b4b4;
+    box-shadow: inset -1px -1px 0 0 #5c5c5c, inset 1px 1px 0 0 #fff4fd;
+    padding: 5px;
+}
+
+#repetir-guifo-o:hover {
+    display: none;
+    position: relative;
+    left: 595px;
+    bottom: 36px;
+    background: #110038;
+    border: 2px solid #5c5c5c;
+    box-shadow: inset 1px 1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+    padding: 5px;
+}
+
+.listo {
+    width: 60%;
+    margin-left: auto;
 }

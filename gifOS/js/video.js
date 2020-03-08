@@ -8,6 +8,8 @@ let stopBoton = document.querySelector("button#stop");
 let btnEmpezar = document.getElementById("empezar");
 let containerComenzar = document.getElementsByClassName("container-menu")[0];
 let videoEncuadro = document.getElementsByClassName("video-frame")[0];
+let repetirBtn = document.getElementById("repetir-guifo");
+let capturaGif = document.getElementById("captura-gif");
 let form = new FormData();
 let blobStop;
 
@@ -23,7 +25,7 @@ detener.onclick = function() {
     detener.style.display = "none";
     comenzar.style.display = "none";
     document.getElementById("subir-guifo").style.display = "block";
-    document.getElementById("repetir-guifo").style.display = "block";
+    repetirBtn.style.display = "block";
 };
 
 stopBoton.style.display = "none";
@@ -114,7 +116,7 @@ function stopRecordingCallback() {
 
 document.querySelector("#subir-guifo").onclick = function() {
     videoEncuadro.style.display = "none";
-    document.getElementById("captura-gif").style.display = "block";
+    capturaGif.style.display = "block";
 
     postToGiphy(form).then(response => {
         // This is the specific id of the gif updated to giphy (can verified the id here https://giphy.com/channel/solescobar10c6)
@@ -135,7 +137,7 @@ document.querySelector("#subir-guifo").onclick = function() {
                 // registrar el nuevo gif en local storage con sur url
                 // localStorage.length will help for the loop to get them back after, first one saved will be myGifos-1, second one myGifos-2...
                 localStorage.setItem("myGifos-" + localStorage.length, url);
-                document.getElementById("captura-gif").style.display = "none";
+                capturaGif.style.display = "none";
                 document.getElementById("captura-exito").style.display =
                     "block";
                 videoCapturado.src = video.srcObject = null;

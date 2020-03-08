@@ -7,7 +7,6 @@ let counter = document.getElementById("counter");
 let misgifs = document.getElementById("misgifs");
 let hidden = document.querySelector("select#themes");
 let lupa = document.querySelector("img.lupa");
-// let myNodelist = document.getElementsByClassName("a");
 let tituloGif = document.getElementsByTagName("span");
 let verMas = document.getElementsByClassName("boton-gif");
 let searchSubmit = document.getElementsByClassName("submit-search")[0];
@@ -29,11 +28,12 @@ function cambiarTemaOscuro() {
     lupa.src = "./assets/lupa_light.svg";
     searchSubmit.className = "submit-search-o";
     crearGuifos.id = "crear-gifos-o";
-    for (i = 0; i < tituloGif.length; i++) {
-        tituloGif[i].id = "titlegif-o";
-    }
-    for (var a = 0; a < verMas.length; a++) {
-        verMas[a].id = "boton-gif-o";
+
+    for (let a = 0; a < verMas.length; a++) {
+        for (let b = 0; b < tituloGif.length; b++) {
+            verMas[a].style.backgroundColor = "#2E32FB";
+            tituloGif[b].id = "titlegif-o";
+        }
     }
 }
 
@@ -49,11 +49,12 @@ function cambiarTemaClaro() {
     lupa.src = "./assets/lupa_inactive.svg";
     searchSubmit.className = "submit-search";
     crearGuifos.id = "crear-gifos";
-    for (i = 0; i < tituloGif.length; i++) {
-        tituloGif[i].id = "titlegif";
-    }
-    for (var a = 0; a < verMas.length; a++) {
-        verMas[a].id = "boton-gif";
+
+    for (let a = 0; a < verMas.length; a++) {
+        for (let b = 0; b < tituloGif.length; b++) {
+            verMas[a].style.backgroundColor = "#4180F6";
+            tituloGif[b].id = "titlegif";
+        }
     }
 }
 

@@ -82,7 +82,7 @@ let fakeInput01 = document.querySelector(".fakeInput01");
 //EVENTO PARA SUBMIT
 searchForm.addEventListener("submit", function(e) {
     e.preventDefault();
-    const q = searchInput.value;
+    let q = searchInput.value;
     search(q);
     trendingEl.innerHTML = "";
     randomGif.innerHTML = "";
