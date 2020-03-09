@@ -10,6 +10,8 @@ let containerComenzar = document.getElementsByClassName("container-menu")[0];
 let videoEncuadro = document.getElementsByClassName("video-frame")[0];
 let repetirBtn = document.getElementById("repetir-guifo");
 let capturaGif = document.getElementById("captura-gif");
+let capturaExito = document.getElementById("captura-exito");
+let misGifs = document.getElementsByClassName("capturaExito")[0];
 let form = new FormData();
 let blobStop;
 
@@ -138,8 +140,7 @@ document.querySelector("#subir-guifo").onclick = function() {
                 // localStorage.length will help for the loop to get them back after, first one saved will be myGifos-1, second one myGifos-2...
                 localStorage.setItem("myGifos-" + localStorage.length, url);
                 capturaGif.style.display = "none";
-                document.getElementById("captura-exito").style.display =
-                    "block";
+                capturaExito.style.display = "block";
                 videoCapturado.src = video.srcObject = null;
                 videoCapturado.muted = false;
                 videoCapturado.volume = 1;
@@ -177,3 +178,5 @@ btnEmpezar.onclick = function() {
 };
 
 document.getElementById("repetir-guifo").onclick = recording;
+
+// misgifs.onclick =

@@ -9,7 +9,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #fff4fd;
+    background-color: #fafafa;
 }
 
 #counter {
@@ -151,7 +151,7 @@ nav {
     background: #f7c9f3;
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
-    height: 28px;
+    height: 27px;
 }
 
 #themes:hover,
@@ -172,12 +172,15 @@ nav {
 }
 
 #crear-gifos {
+    padding: 0px 5px 0px 5px;
     background: #f7c9f3;
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
 }
 
 #crear-gifos-o {
+    padding: 0px 5px 0px 5px;
+    color: white;
     background: #ee3efe;
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
@@ -369,12 +372,11 @@ ol {
     position: relative;
     left: 7px;
     padding-left: 3px;
-
     margin: -7px;
     align-items: center;
     justify-content: space-between;
-    width: 208px;
-    font-size: 14px;
+    width: 205px;
+    font-size: 13px;
     color: #ffffff;
     background: linear-gradient(
         90deg,
@@ -391,7 +393,7 @@ ol {
     padding-left: 3px;
     align-items: center;
     justify-content: space-between;
-    width: 208px;
+    width: 206px;
     font-size: 14px;
     color: #ffffff;
     background: linear-gradient(
@@ -432,4 +434,17 @@ ol {
 
 #img-boton {
     top: 463px;
+}
+
+.sol:hover {
+    width: calc(240px * 4 + 3em);
+    font-size: 10px;
+    position: absolute;
+    margin-left: -228px;
+    margin-top: 192px;
+    background: linear-gradient(
+        90deg,
+        rgba(46, 50, 251, 1) 12%,
+        rgba(238, 62, 254, 1) 89%
+    );
 }
