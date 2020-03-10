@@ -376,7 +376,7 @@ ol {
     align-items: center;
     justify-content: space-between;
     width: 205px;
-    font-size: 13px;
+    font-size: 11px;
     color: #ffffff;
     background: linear-gradient(
         90deg,
@@ -394,7 +394,7 @@ ol {
     align-items: center;
     justify-content: space-between;
     width: 206px;
-    font-size: 14px;
+    font-size: 11px;
     color: #ffffff;
     background: linear-gradient(
         90deg,
@@ -447,4 +447,9 @@ ol {
         rgba(46, 50, 251, 1) 12%,
         rgba(238, 62, 254, 1) 89%
     );
+}
+
+#search-input:invalid + button {
+    opacity: 0.5;
+    pointer-events: none;
 }
