@@ -109,7 +109,7 @@ searchInput.addEventListener("input", function(evt) {
 
 resultSugeridos1.onclick = function() {
     aleatorio = Math.round(Math.random() * 12);
-    let q = searchInput.value;
+    let q = resultSugeridos1.value;
     search(resultSugeridos1.value);
     searchInput.value = resultSugeridos1.value;
     resultSugeridos1.value = resultadosSugeridos1[aleatorio];
@@ -121,7 +121,7 @@ resultSugeridos1.onclick = function() {
 
 resultSugeridos2.onclick = function() {
     aleatorio = Math.round(Math.random() * 12);
-    let q = searchInput.value;
+    let q = resultSugeridos2.value;
     search(resultSugeridos2.value);
     searchInput.value = resultSugeridos2.value;
     resultSugeridos1.value = resultadosSugeridos1[aleatorio];
@@ -133,7 +133,7 @@ resultSugeridos2.onclick = function() {
 
 resultSugeridos3.onclick = function() {
     aleatorio = Math.round(Math.random() * 12);
-    let q = searchInput.value;
+    let q = resultSugeridos3.value;
     search(resultSugeridos3.value);
     searchInput.value = resultSugeridos3.value;
     resultSugeridos1.value = resultadosSugeridos1[aleatorio];
