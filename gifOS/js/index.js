@@ -156,7 +156,10 @@ function crearTags() {
     tagEtiqueta = document.querySelectorAll("button.boton-tags");
     tagEtiqueta.forEach(function(valor, index) {
         valor.onclick = function() {
+            let q = valor.innerHTML;
             search(valor.innerHTML);
+            searchInput.value = valor.innerHTML;
+            fakeInput01.innerHTML = `<input value= "${q}" readonly class="inputFake fakeInput01">  `;
         };
     });
     i++;
