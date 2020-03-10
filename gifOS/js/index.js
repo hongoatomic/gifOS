@@ -94,7 +94,8 @@ searchForm.addEventListener("submit", function(e) {
     crearTags();
 });
 
-searchInput.onclick = function() {
+searchInput.addEventListener("input", function(evt) {
+    let q = searchInput.value;
     resultadoSugerido.appendChild(resultSugeridos1);
     resultadoSugerido.appendChild(resultSugeridos2);
     resultadoSugerido.appendChild(resultSugeridos3);
@@ -104,33 +105,42 @@ searchInput.onclick = function() {
     document.getElementsByClassName("boton-resultados")[0].readOnly = true;
     document.getElementsByClassName("boton-resultados")[1].readOnly = true;
     document.getElementsByClassName("boton-resultados")[2].readOnly = true;
-};
+});
 
 resultSugeridos1.onclick = function() {
     aleatorio = Math.round(Math.random() * 12);
+    let q = searchInput.value;
     search(resultSugeridos1.value);
     searchInput.value = resultSugeridos1.value;
     resultSugeridos1.value = resultadosSugeridos1[aleatorio];
     resultSugeridos2.value = resultadosSugeridos2[aleatorio];
     resultSugeridos3.value = resultadosSugeridos3[aleatorio];
+    fakeInput01.innerHTML = `<input value= "${q}" readonly class="inputFake fakeInput01">  `;
+    crearTags();
 };
 
 resultSugeridos2.onclick = function() {
     aleatorio = Math.round(Math.random() * 12);
+    let q = searchInput.value;
     search(resultSugeridos2.value);
     searchInput.value = resultSugeridos2.value;
     resultSugeridos1.value = resultadosSugeridos1[aleatorio];
     resultSugeridos2.value = resultadosSugeridos2[aleatorio];
     resultSugeridos3.value = resultadosSugeridos3[aleatorio];
+    fakeInput01.innerHTML = `<input value= "${q}" readonly class="inputFake fakeInput01">  `;
+    crearTags();
 };
 
 resultSugeridos3.onclick = function() {
     aleatorio = Math.round(Math.random() * 12);
+    let q = searchInput.value;
     search(resultSugeridos3.value);
     searchInput.value = resultSugeridos3.value;
     resultSugeridos1.value = resultadosSugeridos1[aleatorio];
     resultSugeridos2.value = resultadosSugeridos2[aleatorio];
     resultSugeridos3.value = resultadosSugeridos3[aleatorio];
+    fakeInput01.innerHTML = `<input value= "${q}" readonly class="inputFake fakeInput01">  `;
+    crearTags();
 };
 
 let i = 0;
