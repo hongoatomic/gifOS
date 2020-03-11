@@ -11,6 +11,7 @@ let tituloGif = document.getElementsByTagName("span");
 let verMas = document.getElementsByClassName("boton-gif");
 let searchSubmit = document.getElementsByClassName("submit-search")[0];
 let crearGuifos = document.getElementById("crear-guifos");
+let hoverGif = document.getElementsByTagName("p");
 
 temas.onchange = function() {
     cambiarTema(this.value);
@@ -31,8 +32,11 @@ function cambiarTemaOscuro() {
 
     for (let a = 0; a < verMas.length; a++) {
         for (let b = 0; b < tituloGif.length; b++) {
-            verMas[a].style.backgroundColor = "#2E32FB";
-            tituloGif[b].id = "titlegif-o";
+            for (let c = 0; c < hoverGif.length; c++) {
+                verMas[a].style.backgroundColor = "#2E32FB";
+                tituloGif[b].id = "titlegif-o";
+                hoverGif[c].id = "hovergif-o";
+            }
         }
     }
 }
@@ -52,8 +56,11 @@ function cambiarTemaClaro() {
 
     for (let a = 0; a < verMas.length; a++) {
         for (let b = 0; b < tituloGif.length; b++) {
-            verMas[a].style.backgroundColor = "#4180F6";
-            tituloGif[b].id = "titlegif";
+            for (let c = 0; c < hoverGif.length; c++) {
+                verMas[a].style.backgroundColor = "#4180F6";
+                tituloGif[b].id = "titlegif";
+                hoverGif[c].id = "hovergif";
+            }
         }
     }
 }

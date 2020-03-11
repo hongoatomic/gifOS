@@ -116,6 +116,12 @@ resultSugeridos1.onclick = function() {
     resultSugeridos2.value = resultadosSugeridos2[aleatorio];
     resultSugeridos3.value = resultadosSugeridos3[aleatorio];
     fakeInput01.innerHTML = `<input value= "${q}" readonly class="inputFake fakeInput01">  `;
+    trendingEl.innerHTML = "";
+    randomGif.innerHTML = "";
+    fakeInput.innerHTML = "";
+    fakeInput2.innerHTML = "";
+    fakeInput.style.border = "none";
+    fakeInput2.style.border = "none";
     crearTags();
 };
 
@@ -128,6 +134,12 @@ resultSugeridos2.onclick = function() {
     resultSugeridos2.value = resultadosSugeridos2[aleatorio];
     resultSugeridos3.value = resultadosSugeridos3[aleatorio];
     fakeInput01.innerHTML = `<input value= "${q}" readonly class="inputFake fakeInput01">  `;
+    trendingEl.innerHTML = "";
+    randomGif.innerHTML = "";
+    fakeInput.innerHTML = "";
+    fakeInput2.innerHTML = "";
+    fakeInput.style.border = "none";
+    fakeInput2.style.border = "none";
     crearTags();
 };
 
@@ -140,6 +152,12 @@ resultSugeridos3.onclick = function() {
     resultSugeridos2.value = resultadosSugeridos2[aleatorio];
     resultSugeridos3.value = resultadosSugeridos3[aleatorio];
     fakeInput01.innerHTML = `<input value= "${q}" readonly class="inputFake fakeInput01">  `;
+    trendingEl.innerHTML = "";
+    randomGif.innerHTML = "";
+    fakeInput.innerHTML = "";
+    fakeInput2.innerHTML = "";
+    fakeInput.style.border = "none";
+    fakeInput2.style.border = "none";
     crearTags();
 };
 
@@ -238,12 +256,12 @@ const trending = fetch(
             const height = obj.images.fixed_height.height;
             const title = obj.title;
 
-            resultsHTML += ` <img
-            class="item"
+            resultsHTML += ` <div class="intento"><img
+            class="item item1"
         src="${url}"
         height="${height}"
         alt="${title}"
-        >`;
+        ><div class="hover"><p id="hovergif"> ${title} </p></div> </div>`;
         });
         trendingEl.innerHTML = resultsHTML;
     });
