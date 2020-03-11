@@ -178,5 +178,3 @@ btnEmpezar.onclick = function() {
 };
 
 document.getElementById("repetir-guifo").onclick = recording;
-
-// misgifs.onclick =
