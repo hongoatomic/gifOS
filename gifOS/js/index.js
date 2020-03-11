@@ -90,22 +90,92 @@ searchForm.addEventListener("submit", function(e) {
     fakeInput2.innerHTML = "";
     fakeInput.style.border = "none";
     fakeInput2.style.border = "none";
-    fakeInput01.innerHTML = `<input value= "${q}" readonly class="inputFake fakeInput01">  `;
+    fakeInput01.innerHTML = `<input value= "${q}" readonly class="inputFake fakeInput01">`;
     crearTags();
 });
 
-searchInput.addEventListener("input", function(evt) {
-    let q = searchInput.value;
-    resultadoSugerido.appendChild(resultSugeridos1);
-    resultadoSugerido.appendChild(resultSugeridos2);
-    resultadoSugerido.appendChild(resultSugeridos3);
-    resultSugeridos1.className = "boton-resultados";
-    resultSugeridos2.className = "boton-resultados";
-    resultSugeridos3.className = "boton-resultados";
-    document.getElementsByClassName("boton-resultados")[0].readOnly = true;
-    document.getElementsByClassName("boton-resultados")[1].readOnly = true;
-    document.getElementsByClassName("boton-resultados")[2].readOnly = true;
-});
+let input1created = false,
+    input2created = false,
+    input3created = false;
+function showSuggestion() {
+    if (searchInput.value == "") {
+        resultadoSugerido.style.display = "none";
+        /* Remove only if created earlier the input */
+        if (input1created) {
+            resultadoSugerido.removeChild(resultSugeridos1);
+            input1created = false;
+        }
+        if (input2created) {
+            resultadoSugerido.removeChild(resultSugeridos2);
+            input2created = false;
+        }
+        if (input3created) {
+            resultadoSugerido.removeChild(resultSugeridos3);
+            input3created = false;
+        }
+    } else if (searchInput.value.length === 1) {
+        /* Search words in suggestions only for the first letter */
+        let output = [];
+        let q = searchInput.value;
+        /* For each words list find if a words start with the letter entered in the input */
+        for (let index = 0; index < resultadosSugeridos1.length; ++index) {
+            let value1 = resultadosSugeridos1[index];
+            let value2 = resultadosSugeridos2[index];
+            let value3 = resultadosSugeridos3[index];
+            /* Do not bother with upper and lower case letter */
+            value1 = value1.toLowerCase();
+            value2 = value2.toLowerCase();
+            value3 = value3.toLowerCase();
+            q = q.toLowerCase();
+            /* Find in each suggest list if the word start with the letter in input */
+            if (value1[0] === q) {
+                output.push(value1);
+            }
+            if (value2[0] === q) {
+                output.push(value2);
+            }
+            if (value3[0] === q) {
+                output.push(value3);
+            }
+            /* When we have the first three words stop loop */
+            if (output.length === 3) {
+                break;
+            }
+        }
+        /* If we find one matching word create first suggestion */
+        if (output.length >= 1) {
+            resultSugeridos1.value = output[0];
+            resultadoSugerido.appendChild(resultSugeridos1);
+            /* inputcreated used to indicate we add an input and remove it when we erase search input value */
+            input1created = true;
+            resultSugeridos1.className = "boton-resultados";
+            document.getElementsByClassName(
+                "boton-resultados"
+            )[0].readOnly = true;
+        }
+        /* If we find two matching words create the second suggestion */
+        if (output.length >= 2) {
+            resultSugeridos2.value = output[1];
+            input2created = true;
+            resultadoSugerido.appendChild(resultSugeridos2);
+            resultSugeridos2.className = "boton-resultados";
+            document.getElementsByClassName(
+                "boton-resultados"
+            )[1].readOnly = true;
+        }
+        /* If we find three matching words create the third suggestion */
+        if (output.length >= 3) {
+            resultSugeridos3.value = output[2];
+            input3created = true;
+            resultadoSugerido.appendChild(resultSugeridos3);
+            resultSugeridos3.className = "boton-resultados";
+            document.getElementsByClassName(
+                "boton-resultados"
+            )[2].readOnly = true;
+        }
+        resultadoSugerido.style.display = "block";
+    }
+}
 
 resultSugeridos1.onclick = function() {
     aleatorio = Math.round(Math.random() * 12);

@@ -460,8 +460,7 @@ ol {
         rgba(238, 62, 254, 1) 89%
     );
 }
-
-#hovergif-o:hover {
+.intento:hover #hovergif-o {
     opacity: 1;
     position: relative;
     top: -190px;
@@ -474,8 +473,7 @@ ol {
         rgba(238, 62, 254, 1) 89%
     );
 }
-
-#hovergif:hover {
+.intento:hover #hovergif {
     opacity: 1;
     position: relative;
     top: -190px;
